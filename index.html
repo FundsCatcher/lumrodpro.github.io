@@ -31,12 +31,13 @@
 
 <body class="bg-[#F8FAFC] text-[#1A202C] dark:bg-[#0F172A] dark:text-white">
 
-  <!-- 🔄 Dark Mode Toggle -->
-  <div class="text-right p-4">
-    <button id="toggleTheme" class="border px-4 py-2 rounded text-sm hover:bg-gray-100 dark:hover:bg-gray-700">
-      Toggle Dark Mode
-    </button>
-  </div>
+  <!-- 🌗 Enhanced Dark Mode Toggle -->
+<div class="flex justify-end p-4">
+  <button id="themeToggle" class="flex items-center space-x-2 text-sm bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full transition duration-300">
+    <span id="themeIcon">🌙</span>
+    <span id="themeLabel" class="text-gray-800 dark:text-gray-200">Dark Mode</span>
+  </button>
+</div>
 
   <!-- 🎯 Hero Section -->
   <section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('assets/img/banner.png');">
@@ -173,9 +174,29 @@
 
   <!-- 🔽 Scripts -->
   <script>
-    document.getElementById('toggleTheme').addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
-  </script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const icon = document.getElementById('themeIcon');
+  const label = document.getElementById('themeLabel');
+
+  // Load saved theme preference
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark');
+    icon.textContent = '🌞';
+    label.textContent = 'Light Mode';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    const isDark = html.classList.contains('dark');
+
+    // Update icon + label
+    icon.textContent = isDark ? '🌞' : '🌙';
+    label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+
+    // Store preference
+    localStorage.theme = isDark ? 'dark' : 'light';
+  });
+</script>
 </body>
 </html>
