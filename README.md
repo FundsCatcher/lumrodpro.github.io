@@ -22,11 +22,16 @@ Deployed with **GitHub Pages**, this site reflects my real-world solutions, clie
 
 ---
 
-## 🗂 Project Structure
-index.html # Main portfolio site (editable via Notepad++)
-assets/img/ # Banners, screenshots, and workflow diagrams
-CHANGELOG.md # Version history and changes
-COPYRIGHT.md # Intellectual property statement
+## 📁 Project Structure
+
+This repository is organized as follows:
+
+| File / Folder       | Description                                                                 |
+|---------------------|-----------------------------------------------------------------------------|
+| `index.html`        | 🔧 Main portfolio HTML file (editable via Notepad++)                        |
+| `assets/img/`       | 🖼️  Banners, screenshots, and workflow diagrams                             |
+| `CHANGELOG.md`      | 📝 Version history and implemented feature logs                             |
+| `COPYRIGHT.md`      | ⚖️  Intellectual property declaration — All rights reserved                 |
 
 ---
 
@@ -36,11 +41,15 @@ Visit 👉 [https://fundscatcher.github.io](https://fundscatcher.github.io)
 
 ---
 
-## 📮 Contact
+## 📬 Contact Me
 
-- **Email:** rodriguez.lumier@gmail.com  
-- **LinkedIn:** [linkedin.com/in/lumrodri](https://linkedin.com/in/lumrodri)  
-- **GitHub:** [github.com/FundsCatcher](https://github.com/FundsCatcher)
+Have a project or opportunity to discuss?
+
+- 💼 [LinkedIn](https://linkedin.com/in/lumrodri)
+- 📨 [Email](mailto:rodriguez.lumier@gmail.com)
+- 🌐 [Live Portfolio](https://fundscatcher.github.io/lumrodpro.github.io/)
+
+> I'm always open to conversations about AI, automation, SaaS workflows, or UX challenges. Let’s connect!
 
 ---
 
