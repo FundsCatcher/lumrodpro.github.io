@@ -7,6 +7,11 @@
   <title>Lumier Rodriguez | AI Workflow & SaaS Expert</title>
 
   <!-- ✅ Tailwind via CDN -->
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- Remove or comment out tailwind.config if using CDN -->
 
@@ -24,11 +29,12 @@
 
 <body class="bg-[#F8FAFC] text-[#1A202C] dark:bg-[#0F172A] dark:text-white">
 
-  <!-- 🌗 Enhanced Dark Mode Toggle -->
+  <!-- 🌗 Animated Icon Toggle -->
 <div class="flex justify-end p-4">
-  <button id="themeToggle" class="flex items-center space-x-2 text-sm bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full transition duration-300">
-    <span id="themeIcon">🌙</span>
-    <span id="themeLabel" class="text-gray-800 dark:text-gray-200">Dark Mode</span>
+  <button id="themeToggle" class="w-16 h-9 flex items-center justify-between bg-gray-300 dark:bg-gray-600 rounded-full px-1 transition duration-300">
+    <span id="sunIcon" class="text-sm">🌞</span>
+    <span id="toggleKnob" class="bg-white w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 translate-x-0 dark:translate-x-6"></span>
+    <span id="moonIcon" class="text-sm hidden dark:inline">🌙</span>
   </button>
 </div>
 
@@ -166,29 +172,39 @@
   </section>
 
   <!-- 🔽 Scripts -->
-  <script>
+ <script>
   const toggleBtn = document.getElementById('themeToggle');
+  const knob = document.getElementById('toggleKnob');
   const html = document.documentElement;
-  const icon = document.getElementById('themeIcon');
-  const label = document.getElementById('themeLabel');
+  const sunIcon = document.getElementById('sunIcon');
+  const moonIcon = document.getElementById('moonIcon');
 
   // Load saved theme preference
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     html.classList.add('dark');
-    icon.textContent = '🌞';
-    label.textContent = 'Light Mode';
+  } else {
+    html.classList.remove('dark');
   }
+
+  // Update UI on load
+  knob.classList.toggle('translate-x-6', html.classList.contains('dark'));
 
   toggleBtn.addEventListener('click', () => {
     html.classList.toggle('dark');
     const isDark = html.classList.contains('dark');
 
-    // Update icon + label
-    icon.textContent = isDark ? '🌞' : '🌙';
-    label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    knob.classList.toggle('translate-x-6', isDark);
 
-    // Store preference
-    localStorage.theme = isDark ? 'dark' : 'light';
+    // Icon visibility (optional if you're using Tailwind classes)
+    sunIcon.classList.toggle('hidden', isDark);
+    moonIcon.classList.toggle('hidden', !isDark);
+    moonIcon.classList.toggle('inline', isDark);
+
+    // Save preference
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 </script>
 </body>
