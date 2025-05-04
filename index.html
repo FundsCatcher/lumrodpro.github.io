@@ -1,119 +1,165 @@
-<!DOCTYPE html>
 <!-- 
 📝 Change Log
-v1.0.0 – Portfolio Upgrade with ScrollReveal (May 4, 2025)
-• Dark Mode forced by default (toggle removed)
-• Storytelling strategy section with tabbed layout (“My Format” & “Real Examples”)
-• ScrollReveal.js integrated for scroll animations
-• Skills and certification sections with hover/scale animations
-• Case Study cards added with image, summary, and link placeholders
-• Tailwind CDN and lightweight assets for recruiter-optimized load time
+v1.0 - Initial scroll-reveal version with alternating timeline (May 3, 2025)
+• Added ScrollReveal.js
+• Timeline alternates left/right
+• Skills and certifications animate on scroll
+• Forced dark mode on entire site
+• Removed dark mode toggle
 -->
+
+<!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lumier Rodriguez | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    .tab-active { @apply border-b-2 border-blue-500 font-bold text-blue-400; }
-  </style>
-</head>
-<body class="bg-[#0F172A] text-white">
-  <section class="px-6 py-12 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8 text-center">📘 How I Write User Stories</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumier Rodriguez | AI Workflow & SaaS Expert</title>
 
-    <!-- Tabs -->
-    <div class="flex justify-center space-x-6 mb-8">
-      <button onclick="showTab('format')" id="tab-format" class="tab-active">🛠️ My Format</button>
-      <button onclick="showTab('examples')" id="tab-examples" class="">📌 Real Examples</button>
-    </div>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: #1E90FF;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
 
-    <!-- Tab Content -->
-    <div id="format" class="tab-content">
-      <h3 class="text-xl font-semibold mb-4">🎯 User Story (Concept-First)</h3>
-      <pre class="bg-gray-800 p-4 rounded text-sm overflow-auto">
-Feature: [What are we building?]  
-Summary: [One sentence that captures the user’s need or problem]  
-Why It Matters: [A sentence or two connecting this feature to business or user goals]
+  <body class="bg-[#0f172a] text-white relative overflow-x-hidden">
 
-Key Points:
-- Behavior or rule 1
-- Behavior or rule 2
-- Edge cases or considerations
-
-Acceptance Guidelines:
-- [ ] Simple checkbox-style rules for testing or validation
-- [ ] Designed to be skimmable, not painful
-      </pre>
-
-      <p class="mt-6 italic text-gray-300">
-        My stories are crafted to be developer-friendly: skimmable, clear, and paired with visuals and convos — not just Jira tickets.
-      </p>
-    </div>
-
-    <div id="examples" class="tab-content hidden">
-      <div class="mb-8">
-        <h3 class="text-xl font-semibold text-blue-400">📍 Example: Digital Patient Intake Form</h3>
-        <ul class="mt-2 list-disc list-inside text-sm text-gray-300">
-          <li><strong>Summary:</strong> Secure, mobile-friendly pre-appointment form</li>
-          <li><strong>Why:</strong> Reduces burden and syncs with EHR</li>
-          <li><strong>Key:</strong> Auto-save, real-time sync, triggered on scheduling</li>
-          <li><strong>Acceptance:</strong> SMS link, 7-day trigger, form saves to EHR</li>
-        </ul>
+    <!-- Hero -->
+    <section class="text-center py-16 bg-cover bg-center" style="background-image: url('assets/img/banner.png')">
+      <div class="bg-black bg-opacity-60 p-6 rounded-md max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg mb-4">
+          I turn complex processes into <br />streamlined, scalable workflows.
+        </h1>
+        <p class="text-blue-300 text-xl mb-6">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
+        <div class="space-x-4">
+          <a href="#timeline" class="bg-blue-600 hover:bg-blue-800 text-white px-5 py-2 rounded transition">My Journey</a>
+          <a href="#skills" class="border border-blue-600 text-blue-600 px-5 py-2 rounded hover:bg-blue-100 transition">My Skills</a>
+        </div>
       </div>
+    </section>
 
-      <div>
-        <h3 class="text-xl font-semibold text-blue-400">📍 Example: Placement Denied by Vendor</h3>
-        <ul class="mt-2 list-disc list-inside text-sm text-gray-300">
-          <li><strong>Summary:</strong> Tracks denied requests with full details</li>
-          <li><strong>Why:</strong> Enables insight for vendors & case managers</li>
-          <li><strong>Tech:</strong> SQL + stored procs from HHAX std/enterprise</li>
-          <li><strong>Acceptance:</strong> Accurate filters, export options, secure access</li>
-        </ul>
+    <!-- Skills -->
+    <section id="skills" class="py-16 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">My Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+        <div class="p-6 bg-gray-800 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg" data-sr>
+          <h4 class="font-bold mb-2">🧰 Tools</h4>
+          Jira, Confluence, GitHub, Notion, Figma, Make
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg" data-sr>
+          <h4 class="font-bold mb-2">💻 Tech</h4>
+          HTML/CSS, JavaScript (basic), SQL, Power BI, YAML
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg" data-sr>
+          <h4 class="font-bold mb-2">🌀 Processes</h4>
+          Agile, Scrum, Kanban, Six Sigma
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg" data-sr>
+          <h4 class="font-bold mb-2">🏥 Domains</h4>
+          SaaS, HealthTech, Government, Insurance
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="px-6 py-12 bg-gray-900" id="case-studies">
-    <h2 class="text-3xl font-bold mb-10 text-center">🧩 Case Studies / Examples</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg transition" data-sr>
-        <h3 class="text-lg font-semibold text-purple-300 mb-2">📊 SaaS Workflow: Claims Process</h3>
-        <img src="assets/img/workflow1.png" alt="Claims Diagram" class="rounded mb-2" />
-        <p class="text-sm text-gray-400">Workflow + API Mapping for CHHA intake logic</p>
-        <a href="#" class="text-blue-400 underline text-sm mt-2 inline-block">[Google Drive Link Placeholder]</a>
+    <!-- Certifications -->
+    <section class="py-16 px-6 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Certifications</h2>
+      <ul class="space-y-4 text-center">
+        <li class="hover:scale-105 transition transform duration-300" data-sr>✅ Six Sigma: Black Belt – PMI</li>
+        <li class="hover:scale-105 transition transform duration-300" data-sr>✅ Agile Foundation – IIBA</li>
+        <li class="hover:scale-105 transition transform duration-300" data-sr>✅ AI & Business Strategy – PMI</li>
+        <li class="hover:scale-105 transition transform duration-300" data-sr>✅ PMP Certification – Coursera</li>
+      </ul>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="py-16 px-6 max-w-6xl mx-auto relative">
+      <h2 class="text-3xl font-bold text-center mb-10">Professional Journey</h2>
+      <div class="timeline-container relative space-y-12">
+
+        <!-- Entry 1 -->
+        <div class="flex flex-col md:flex-row justify-between items-center md:even:flex-row-reverse group" data-sr>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md w-full md:w-[45%] hover:scale-105 transition">
+            <h3 class="text-xl font-semibold">Neo Innovations <span class="block text-sm font-normal text-blue-400">Technical BA, 2025</span></h3>
+            <p class="text-sm mt-2 text-gray-300 group-hover:text-white">Led documentation for insurance-integrated SaaS platform with HIPAA compliance.</p>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="flex flex-col md:flex-row justify-between items-center md:odd:flex-row-reverse group" data-sr>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md w-full md:w-[45%] hover:scale-105 transition">
+            <h3 class="text-xl font-semibold">Amsive <span class="block text-sm font-normal text-blue-400">SaaS Consultant, 2024–2025</span></h3>
+            <p class="text-sm mt-2 text-gray-300 group-hover:text-white">Upgraded enterprise reporting workflows, user mockups, and stakeholder UAT cycles.</p>
+          </div>
+        </div>
+
+        <!-- Entry 3 -->
+        <div class="flex flex-col md:flex-row justify-between items-center md:even:flex-row-reverse group" data-sr>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md w-full md:w-[45%] hover:scale-105 transition">
+            <h3 class="text-xl font-semibold">Zelis <span class="block text-sm font-normal text-blue-400">Workflow Analyst, 2023–2024</span></h3>
+            <p class="text-sm mt-2 text-gray-300 group-hover:text-white">Configured automation systems and created solution briefs for enterprise clients.</p>
+          </div>
+        </div>
+
+        <!-- Entry 4 -->
+        <div class="flex flex-col md:flex-row justify-between items-center md:odd:flex-row-reverse group" data-sr>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-md w-full md:w-[45%] hover:scale-105 transition">
+            <h3 class="text-xl font-semibold">HHAeXchange <span class="block text-sm font-normal text-blue-400">Sr. Implementation Analyst, 2019–2023</span></h3>
+            <p class="text-sm mt-2 text-gray-300 group-hover:text-white">Directed Agile implementations, integrated ADP/Workday data, led documentation.</p>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg transition" data-sr>
-        <h3 class="text-lg font-semibold text-purple-300 mb-2">🔁 Make.com Sync with Clockify</h3>
-        <img src="assets/img/workflow2.png" alt="Clockify Sync" class="rounded mb-2" />
-        <p class="text-sm text-gray-400">Used Make to sync Salesforce + Clockify to automate reporting.</p>
-        <a href="#" class="text-blue-400 underline text-sm mt-2 inline-block">[Figma Link Placeholder]</a>
+    <!-- Work Links -->
+    <section class="py-16 px-6 max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Explore My Work</h2>
+      <p class="text-gray-300 mb-6">Click to view samples of tools & solutions built</p>
+      <div class="space-y-3">
+        <a href="<Google Drive Link>" target="_blank" class="block text-blue-400 hover:text-blue-600">Google Sheet – Automated Intake Tracker</a>
+        <a href="<Figma Link>" target="_blank" class="block text-blue-400 hover:text-blue-600">Figjam – AI Workflow Design</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    // ScrollReveal animation
-    ScrollReveal().reveal('[data-sr]', {
-      origin: 'bottom',
-      distance: '40px',
-      duration: 700,
-      delay: 100,
-      reset: false
-    });
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+      <p>© 2025 Lumier Rodriguez</p>
+      <div class="space-x-4 mt-2 text-sm">
+        <a href="mailto:rodriguez.lumier@gmail.com" class="hover:underline">Email</a>
+        <a href="https://linkedin.com/in/lumrodri" class="hover:underline">LinkedIn</a>
+        <a href="https://github.com/FundsCatcher" class="hover:underline">GitHub</a>
+      </div>
+    </footer>
 
-    // Tab toggle
-    function showTab(id) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
+    <!-- ScrollReveal.js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal().reveal('[data-sr]', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 800,
+        delay: 100,
+        easing: 'ease-in-out',
+        reset: false,
+        interval: 100,
+      });
+    </script>
 
-      document.querySelectorAll('button').forEach(btn => btn.classList.remove('tab-active'));
-      document.getElementById('tab-' + id).classList.add('tab-active');
-    }
-  </script>
-</body>
+  </body>
 </html>
