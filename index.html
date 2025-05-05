@@ -36,18 +36,43 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
+<style>
+  .nav-link.active {
+  background-color: #38bdf8;
+  color: #0F172A;
+  font-weight: 700;
+}
+</style>
+
 
 <body class="bg-darkbg text-white font-sans">
 
-  <!-- Hero Section -->
-  <section class="relative h-[65vh] flex items-center justify-center text-center overflow-hidden">
-  <img src="assets/banner.png" class="absolute w-full h-full object-cover opacity-20 blur-sm" alt="">
-  <div class="relative z-10 max-w-3xl mx-auto p-8">
+<header class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur border-b border-blue-500/20 shadow-sm">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-sm text-white">
+    <div class="font-bold text-lg text-cyan-400">Lumier Rodriguez</div>
+    <ul class="flex gap-4">
+  <li><a href="#skills" class="nav-link px-4 py-2 rounded-full text-sm font-medium bg-transparent border border-blue-500 text-white hover:bg-blue-500 transition">Skills</a></li>
+  <li><a href="#journey" class="nav-link px-4 py-2 rounded-full text-sm font-medium bg-transparent border border-blue-500 text-white hover:bg-blue-500 transition">Journey</a></li>
+  <li><a href="#contact" class="nav-link px-4 py-2 rounded-full text-sm font-medium bg-transparent border border-blue-500 text-white hover:bg-blue-500 transition">Contact</a></li>
+</ul>
+  </nav>
+</header>
+
+  <!-- HERO Section (Modern & Controlled) -->
+<section class="relative overflow-hidden">
+  <!-- Banner Image with Fixed Max Height -->
+  <div class="relative w-full max-h-[300px] sm:max-h-[340px] md:max-h-[360px] lg:max-h-[400px] overflow-hidden">
+    <img src="assets/banner.png" alt="Banner" class="w-full h-auto object-center opacity-20 mx-auto" />
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F172A]"></div>
+  </div>
+
+  <!-- Hero Text -->
+  <div class="relative text-center z-10 max-w-3xl mx-auto px-6 py-12">
     <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
       <span class="block text-gray-300">I turn complex processes into</span>
       <span class="block bg-gradient-to-r from-blue-400 to-cyan-500 text-transparent bg-clip-text">streamlined, scalable workflows.</span>
     </h1>
-    <p class="mt-4 text-base md:text-lg text-gray-300">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
+    <p class="mt-2 text-base md:text-lg text-gray-300">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
     <div class="mt-6 flex justify-center gap-4">
       <a href="#journey" class="px-5 py-2 bg-primary text-white rounded hover:bg-blue-500 transition">My Journey</a>
       <a href="#skills" class="px-5 py-2 border border-primary rounded hover:bg-primary hover:text-white transition">My Skills</a>
@@ -176,6 +201,30 @@
   gtag('js', new Date());
 
   gtag('config', 'G-5YN1Z5JG55');
+</script>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = [...navLinks]
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean); // ensures no null elements break the loop
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
 </script>
 
 </body>
