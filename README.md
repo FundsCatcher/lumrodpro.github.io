@@ -10,27 +10,45 @@
 
 ---
 
-## 🎯 Welcome
+Welcome! This is the source code for my personal portfolio, a living resume that showcases my skills in AI workflow design, business analysis, and SaaS automation. Built with **HTML**, **TailwindCSS**, and **ScrollReveal.js**, it provides a fast, animated, and fully responsive experience.
 
-Welcome to my personal portfolio site — a curated showcase of my experience, automation strategies, and work samples as a:
-
-- 🧠 **Technical Business Analyst**
-- 🚀 **SaaS Implementation Strategist**
-- 🤖 **AI Workflow Architect**
-
-Deployed with **GitHub Pages**, this site reflects my real-world solutions, client projects, and thought leadership in transforming business processes through automation.
+### 🚀 Live Site  
+🔗 https://fundscatcher.github.io/lumrodpro.github.io/
 
 ---
 
-## 🔑 Key Features
+## 👤 About Me
 
-- 🌚 Dark-mode optimized single-page layout
-- 🧠 “How I Write Stories” framework with real project examples
-- 🕰️ Timeline of experience with scroll-triggered animation
-- 📁 Case study cards with tech stacks, logic flows, and outcomes
-- ✨ ScrollReveal.js + TailwindCSS for modern UI/UX
-- 🧩 Tabbed view for story writing approach
-- 🔗 Links to live work samples (Google Drive, Figjam)
+I'm a hybrid strategist who merges business needs with technical execution. I specialize in:
+- 🧠 Business Analysis for SaaS & automation platforms  
+- 🧩 Story-driven requirements & documentation  
+- 🤖 Workflow design using tools like Make (Integromat), Jira, Confluence  
+- 📊 Data mapping, stakeholder management & implementation tracking
+
+This portfolio is a visual and interactive proof-of-work for recruiters, hiring managers, and collaborators.
+
+---
+
+## 🔍 Key Features
+
+- 🌙 **Dark-mode** single-page responsive layout  
+- ✍️ “How I Write Stories” — My signature format with real examples  
+- 📌 Vertical timeline of experience with animated dots  
+- 🎓 Certifications listed in a clean, modern grid  
+- 🛠️ Case studies with links to Figma diagrams and API logic  
+- ⚙️ ScrollReveal.js + TailwindCSS for smooth animations and UI  
+- 📬 Contact section with LinkedIn, GitHub & email  
+- 📄 Clean codebase (HTML only — no React or JS framework bloat)
+
+---
+
+## 🧰 Built With
+
+- **HTML5** – Semantic markup  
+- **TailwindCSS** – Utility-first CSS for fast layout  
+- **ScrollReveal.js** – Lightweight scroll animations  
+- **Figma / Google Docs** – For linked case studies and wireframes  
+- **GitHub Pages** – Free and fast static site hosting
 
 ---
 
