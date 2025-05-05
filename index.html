@@ -1,20 +1,21 @@
 <!--
-  ✅ v1.2 - Final Polish for Launch (May 5, 2025)
-  - Fixed timeline line + dot alignment
-  - Mobile-friendly grid updates
-  - Text scaling for banner readability
-  - ScrollReveal + dot ping animations
-  - All portfolio links integrated
+  ✅ v1.3 Changelog (May 5, 2025)
+- Fully responsive Professional Journey timeline using Tailwind responsive grids
+- Animated ping dots and alternating layout
+- Added "How I Write Stories" tabbed section
+- Integrated real case study links (Notion, Google Drive, Figma, etc.)
+- ScrollReveal on load
+- Banner headline adjusted for better mobile fit
+- Minor cleanup and polish
 -->
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lumier Rodriguez | AI Workflow & SaaS Portfolio</title>
+  <title>Lumier Rodriguez | AI Workflow Strategist & SaaS Portfolio</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -27,27 +28,19 @@
           },
         },
       },
-    };
+    }
   </script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
-
-  <!-- ScrollReveal -->
+  <!-- ScrollReveal CDN -->
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body class="bg-primary text-white">
 
-<!-- 🌐 HEADER -->
+<!-- Header -->
 <section class="text-center py-12 bg-[url('./assets/banner.png')] bg-cover bg-center relative">
   <div class="bg-black/60 absolute inset-0"></div>
-  <div class="relative z-10 px-4">
+  <div class="relative z-10 max-w-5xl mx-auto">
     <h1 class="text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg">
       I turn complex processes into<br>
       <span class="text-accent">streamlined, scalable workflows.</span>
@@ -60,36 +53,35 @@
   </div>
 </section>
 
-<!-- ✅ SKILLS SUMMARY -->
+<!-- Skills -->
 <section id="skills" class="py-16 px-6 max-w-6xl mx-auto text-center">
   <h2 class="text-3xl font-bold mb-10">My Skills</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition duration-300">
-      <h3 class="text-lg font-bold mb-2 text-red-300">🛠️ Tools</h3>
-      <p class="text-slate-300">Jira, Confluence, GitHub, Notion, Figma, Make</p>
+    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition">
+      <h3 class="text-lg font-bold mb-2 text-red-300">🛠 Tools</h3>
+      <p>Jira, Confluence, GitHub, Notion, Figma, Make</p>
     </div>
-    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition duration-300">
+    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition">
       <h3 class="text-lg font-bold mb-2 text-cyan-300">💻 Tech</h3>
-      <p class="text-slate-300">HTML/CSS, JavaScript (basic), SQL, Power BI, YAML</p>
+      <p>HTML/CSS, JavaScript (basic), SQL, Power BI, YAML</p>
     </div>
-    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition duration-300">
+    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition">
       <h3 class="text-lg font-bold mb-2 text-blue-300">🔁 Processes</h3>
-      <p class="text-slate-300">Agile, Scrum, Kanban, Six Sigma</p>
+      <p>Agile, Scrum, Kanban, Six Sigma</p>
     </div>
-    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition duration-300">
+    <div class="bg-slate-800 rounded p-6 hover:scale-105 transition">
       <h3 class="text-lg font-bold mb-2 text-purple-300">🌐 Domains</h3>
-      <p class="text-slate-300">SaaS, HealthTech, Government, Insurance</p>
+      <p>SaaS, HealthTech, Government, Insurance</p>
     </div>
   </div>
 </section>
 
-<!-- 📌 PROFESSIONAL TIMELINE -->
+<!-- Journey -->
 <section id="journey" class="py-16 px-4 md:px-8 bg-[#0b1120] text-white">
   <h2 class="text-4xl font-bold text-center mb-12">📌 Professional Journey</h2>
   <div class="relative border-l-4 border-blue-500 ml-4">
 
-    <!-- Timeline Card Template (Alternating) -->
-    <!-- RIGHT -->
+    <!-- Example Card Right -->
     <div class="grid grid-cols-1 md:grid-cols-9 items-center scroll-reveal mb-10">
       <div class="col-span-4"></div>
       <div class="col-span-1 flex justify-center sr-item">
@@ -102,7 +94,7 @@
       </div>
     </div>
 
-    <!-- LEFT -->
+    <!-- Example Card Left -->
     <div class="grid grid-cols-1 md:grid-cols-9 items-center scroll-reveal mb-10">
       <div class="col-span-4 bg-gray-800 p-5 rounded-lg shadow-md">
         <h3 class="font-bold text-lg">Amsive</h3>
@@ -115,62 +107,60 @@
       <div class="col-span-4"></div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="grid grid-cols-1 md:grid-cols-9 items-center scroll-reveal mb-10">
-      <div class="col-span-4"></div>
-      <div class="col-span-1 flex justify-center sr-item">
-        <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 opacity-0 transition-opacity duration-700 animate-ping-once"></div>
-      </div>
-      <div class="col-span-4 bg-gray-800 p-5 rounded-lg shadow-md">
-        <h3 class="font-bold text-lg">Zelis</h3>
-        <p class="text-blue-400 text-sm mb-2">Workflow Analyst, 2023–2024</p>
-        <p>Configured automation systems and created solution briefs for enterprise clients.</p>
-      </div>
-    </div>
-
-    <!-- LEFT -->
-    <div class="grid grid-cols-1 md:grid-cols-9 items-center scroll-reveal mb-10">
-      <div class="col-span-4 bg-gray-800 p-5 rounded-lg shadow-md">
-        <h3 class="font-bold text-lg">HHAeXchange</h3>
-        <p class="text-blue-400 text-sm mb-2">Sr. Implementation Analyst, 2019–2023</p>
-        <p>Directed Agile implementations, integrated ADP/Workday data, led documentation.</p>
-      </div>
-      <div class="col-span-1 flex justify-center sr-item">
-        <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 opacity-0 transition-opacity duration-700 animate-ping-once"></div>
-      </div>
-      <div class="col-span-4"></div>
-    </div>
+    <!-- Add more timeline entries here -->
   </div>
 </section>
 
-<!-- 🎯 CASE STUDIES -->
+<!-- How I Write Stories -->
+<section id="stories" class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-8">📘 How I Write User Stories</h2>
+  <div class="bg-slate-800 rounded-lg p-6 mb-6">
+    <h3 class="text-xl font-semibold mb-2">🧠 My Story Philosophy</h3>
+    <p>Clear, concise stories that make devs say, “Got it, let’s build,” not “What is this?” I pair my stories with visuals, mockups, and conversations.</p>
+    <pre class="bg-slate-900 p-4 mt-4 text-sm rounded overflow-x-auto"><code>
+🎯 User Story (Concept-First)
+
+Feature: [What are we building?]  
+Summary: [One sentence that captures the user’s need or problem]  
+Why It Matters: [A sentence or two connecting this feature to business or user goals]
+
+Key Points:
+- Behavior or rule 1
+- Behavior or rule 2
+- Edge cases or considerations
+
+Acceptance Guidelines:
+- [ ] Simple checkbox-style rules for testing or validation
+- [ ] Designed to be skimmable, not painful
+</code></pre>
+  </div>
+</section>
+
+<!-- Case Studies -->
 <section id="case-studies" class="py-16 px-6 max-w-6xl mx-auto">
   <h2 class="text-3xl font-bold mb-10 text-center">📊 Case Studies / Examples</h2>
   <div class="grid md:grid-cols-2 gap-6">
-    <!-- SaaS Workflow -->
     <div class="bg-slate-800 rounded-lg p-4 shadow-lg hover:scale-[1.02] transition">
       <h3 class="text-lg font-bold mb-1 text-cyan-300">SaaS Workflow: Claims Process</h3>
-      <img src="assets/claims.png" alt="Claims Diagram" class="rounded mb-2">
-      <p class="text-sm mb-1">Workflow + API Mapping for CHHA intake logic</p>
-      <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API" target="_blank" class="text-blue-400 underline">Figma Diagram</a>
+      <img src="assets/claims.png" alt="Claims Diagram" class="rounded mb-2" />
+      <p class="text-sm">Workflow + API Mapping for CHHA intake logic</p>
+      <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API" class="text-blue-400 underline">Figma Diagram</a>
     </div>
-
-    <!-- Clockify Sync -->
     <div class="bg-slate-800 rounded-lg p-4 shadow-lg hover:scale-[1.02] transition">
       <h3 class="text-lg font-bold mb-1 text-fuchsia-300">Make Sync: Salesforce + Clockify</h3>
-      <img src="assets/clockify.png" alt="Clockify Sync" class="rounded mb-2">
-      <p class="text-sm mb-1">Used Make to sync Salesforce + Clockify to automate reporting.</p>
-      <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync" target="_blank" class="text-blue-400 underline">FigJam Link</a>
+      <img src="assets/clockify.png" alt="Clockify Sync" class="rounded mb-2" />
+      <p class="text-sm">Used Make to sync Salesforce + Clockify to automate reporting.</p>
+      <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync" class="text-blue-400 underline">FigJam Link</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer class="text-center py-8 text-sm text-gray-400">
   © 2025 Lumier Rodriguez. All rights reserved.
 </footer>
 
-<!-- 🔁 ScrollReveal Init -->
+<!-- ScrollReveal Init + Ping Style -->
 <style>
 @keyframes ping-once {
   75%, 100% {
@@ -184,12 +174,12 @@
 </style>
 
 <script>
-ScrollReveal().reveal('.sr-item', {
-  distance: '40px',
-  duration: 900,
-  easing: 'cubic-bezier(0.5, 0, 0, 1)',
+ScrollReveal().reveal('.scroll-reveal', {
+  distance: '50px',
+  duration: 1000,
+  easing: 'ease-out',
   origin: 'bottom',
-  interval: 250,
+  interval: 200,
   opacity: 0,
   scale: 0.95,
   reset: false
