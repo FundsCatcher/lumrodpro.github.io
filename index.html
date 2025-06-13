@@ -1,12 +1,3 @@
-<!--
-  ✅ Version 3.0 (6/12/2025)
-✅ Sticky navbar with pill buttons
-✅ Hero (refined & simplified)
-✅ Instagram-style “Recent Works” gallery
-✅ Slimmed-down Skills + Journey
-✅ Clean Contact section
--->
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
 <head>
@@ -25,38 +16,62 @@
           },
           colors: {
             primary: '#38BDF8',
-            darkbg: '#0F172A'
-          },
+            darkbg: '#0F172A',
+          }
         }
       }
-    };
+    }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/phosphor.css" rel="stylesheet" />
   <style>
     .nav-link.active {
       background-color: #38bdf8;
       color: #0F172A;
       font-weight: 700;
     }
+    .tooltip {
+      position: relative;
+      cursor: help;
+    }
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body class="bg-darkbg text-white font-sans">
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur border-b border-blue-500/20 shadow-sm">
     <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-sm text-white">
       <div class="font-bold text-lg text-cyan-400">Lumier Rodriguez</div>
       <ul class="flex gap-4">
-        <li><a href="#work" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Works</a></li>
         <li><a href="#skills" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Skills</a></li>
-        <li><a href="#journey" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Journey</a></li>
+        <li><a href="#certifications" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Certifications</a></li>
+        <li><a href="#works" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Works</a></li>
         <li><a href="#contact" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="relative overflow-hidden">
     <div class="relative w-full max-h-[360px] overflow-hidden">
       <img src="assets/banner.png" alt="Banner" class="w-full h-auto object-center opacity-20 mx-auto" />
@@ -70,92 +85,171 @@
       <p class="mt-2 text-lg text-gray-400">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
     </div>
   </section>
+<!-- SKILLS -->
+<section id="skills" class="py-20 px-6 bg-[#111827] text-center">
+  <h2 class="text-2xl font-bold mb-10">🛠️ My Skills</h2>
+  <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/salesforce/white" class="h-6" alt="Salesforce" />
+      <span>Salesforce</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/python/white" class="h-6" alt="Python" />
+      <span>Python (Basic)</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/openai/white" class="h-6" alt="ChatGPT" />
+      <span>ChatGPT</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/postman/white" class="h-6" alt="Postman" />
+      <span>Postman & Swagger</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/notepadplusplus/white" class="h-6" alt="Notepad++" />
+      <span>Notepad++ / Sublime</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/make/white" class="h-6" alt="Make" />
+      <span>Make / Zapier</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/powerbi/white" class="h-6" alt="Power BI" />
+      <span>Power BI / Tableau</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/microsoftazure/white" class="h-6" alt="Azure" />
+      <span>Azure / O365</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/atlassian/white" class="h-6" alt="Atlassian" />
+      <span>Jira / Confluence / Trello</span>
+    </div>
+    <div class="bg-slate-800 p-6 rounded shadow flex items-center gap-4">
+      <img src="https://cdn.simpleicons.org/hl7/white" class="h-6" alt="HL7" />
+      <span>HL7 Messaging</span>
+    </div>
+  </div>
+</section>
 
-  <!-- Recent Works -->
-  <section id="work" class="py-20 px-6 bg-[#0F172A] text-white">
-    <h2 class="text-3xl font-bold text-center mb-10">📷 Recent Works</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <!-- Work Cards -->
-      <div class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
-        <img src="assets/project1-thumb.jpg" alt="Project 1" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300" />
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <div class="text-center">
-            <h3 class="font-semibold text-lg text-white">Claims Automation</h3>
-            <p class="text-sm text-gray-300">Workflow logic via Figma</p>
-          </div>
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="py-20 px-6 bg-[#0b1120] text-center">
+  <h2 class="text-2xl font-bold mb-10">🎓 Certifications</h2>
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+    <a href="https://www.linkedin.com/learning/certificates/71afd0a79a67..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="AI & Business Strategy - PMI">
+      <img src="https://cdn.simpleicons.org/openai/white" class="h-6" alt="AI" />
+      <span>AI & Business Strategy</span>
+    </a>
+    <a href="https://www.linkedin.com/learning/certificates/5d7e8634d80..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="Atlassian Agile Project Management">
+      <img src="https://cdn.simpleicons.org/atlassian/white" class="h-6" alt="Atlassian" />
+      <span>Agile PM (Atlassian)</span>
+    </a>
+    <a href="https://www.linkedin.com/learning/certificates/ed69ba4b801..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="Business Analyst + PM (PMI)">
+      <img src="https://cdn.simpleicons.org/projectmanagementinstitute/white" class="h-6" alt="PMI" />
+      <span>BA & PM (PMI)</span>
+    </a>
+    <a href="https://www.linkedin.com/learning/certificates/4eb3d09c48f..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="Process Improvement Foundations">
+      <img src="https://cdn.simpleicons.org/projectmanagementinstitute/white" class="h-6" alt="PMI" />
+      <span>Process Improvement</span>
+    </a>
+    <div class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="PMP - Placeholder for Link">
+      <img src="https://cdn.simpleicons.org/projectmanagementinstitute/white" class="h-6" alt="PMP" />
+      <span>PMP Certification (Update Link)</span>
+    </div>
+    <a href="https://www.linkedin.com/learning/certificates/9a7dd66cdd4..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="Product Mgmt - Aha!">
+      <img src="https://cdn.simpleicons.org/aha/white" class="h-6" alt="Aha!" />
+      <span>Product Mgmt (Aha!)</span>
+    </a>
+    <a href="https://www.linkedin.com/learning/certificates/eeb5b3199e5..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="ServiceNow IT Leader">
+      <img src="https://cdn.simpleicons.org/servicenow/white" class="h-6" alt="ServiceNow" />
+      <span>ServiceNow IT Leader</span>
+    </a>
+    <a href="https://www.linkedin.com/learning/certificates/5a6f6a315a6..." target="_blank" class="tooltip bg-slate-800 p-6 rounded shadow flex items-center gap-4" data-tooltip="Six Sigma Black Belt">
+      <img src="https://cdn.simpleicons.org/sixsigma/white" class="h-6" alt="Six Sigma" />
+      <span>Six Sigma Black Belt</span>
+    </a>
+  </div>
+</section>
+<!-- CASE STUDIES / PROJECT FEED -->
+<section id="works" class="py-20 px-6 bg-[#0F172A] text-white">
+  <h2 class="text-2xl font-bold text-center mb-10">🧪 Case Studies</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    
+    <!-- Example Project -->
+    <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API?node-id=12-241" target="_blank"
+       class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+      <img src="assets/project1-thumb.jpg" alt="Claims Automation" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+        <div class="text-center">
+          <h3 class="font-semibold text-lg text-white">Claims Automation</h3>
+          <p class="text-sm text-gray-300">Figma-based logic flow</p>
         </div>
       </div>
-      <div class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
-        <img src="assets/project2-thumb.jpg" alt="Project 2" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300" />
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <div class="text-center">
-            <h3 class="font-semibold text-lg text-white">Salesforce Sync</h3>
-            <p class="text-sm text-gray-300">Automation via Make</p>
-          </div>
+    </a>
+
+    <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync?node-id=10-118" target="_blank"
+       class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+      <img src="assets/project2-thumb.jpg" alt="Salesforce Sync" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+        <div class="text-center">
+          <h3 class="font-semibold text-lg text-white">Salesforce Sync</h3>
+          <p class="text-sm text-gray-300">Clockify & Make Automation</p>
         </div>
       </div>
-      <!-- Add more as needed -->
-    </div>
-  </section>
+    </a>
 
-  <!-- Skills -->
-  <section id="skills" class="py-20 px-6 bg-[#111827] text-center">
-    <h2 class="text-2xl font-bold mb-10">🚀 My Skills</h2>
-    <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      <div class="bg-slate-800 p-6 rounded shadow">🛠️ <strong>Tools</strong><br>Jira, GitHub, Notion, Figma, Make</div>
-      <div class="bg-slate-800 p-6 rounded shadow">💻 <strong>Tech</strong><br>HTML, CSS, JavaScript, SQL, YAML, Power BI</div>
-      <div class="bg-slate-800 p-6 rounded shadow">🔁 <strong>Processes</strong><br>Agile, Scrum, Kanban, Six Sigma</div>
-      <div class="bg-slate-800 p-6 rounded shadow">🌐 <strong>Domains</strong><br>SaaS, HealthTech, Government</div>
-    </div>
-  </section>
+    <!-- Placeholder Project -->
+    <a href="#" target="_blank"
+       class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+      <img src="assets/project-placeholder.jpg" alt="Coming Soon" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+        <div class="text-center">
+          <h3 class="font-semibold text-lg text-white">Coming Soon</h3>
+          <p class="text-sm text-gray-300">Stay tuned for updates!</p>
+        </div>
+      </div>
+    </a>
 
-  <!-- Journey -->
-  <section id="journey" class="py-20 px-6 bg-[#0b1120] text-white">
-    <h2 class="text-3xl font-bold text-center mb-10">📌 Journey</h2>
-    <div class="max-w-5xl mx-auto space-y-8">
-      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>Neo Innovations</strong> — Technical BA, 2025<br><span class="text-gray-400 text-sm">Insurance SaaS docs, HIPAA workflows</span></div>
-      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>Amsive</strong> — SaaS Consultant, 2024–2025<br><span class="text-gray-400 text-sm">UAT flows, report revamps, user design</span></div>
-      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>Zelis</strong> — Workflow Analyst, 2023–2024<br><span class="text-gray-400 text-sm">Client automation & briefs</span></div>
-      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>HHAeXchange</strong> — Sr. Analyst, 2019–2023<br><span class="text-gray-400 text-sm">Workday integrations, agile docs</span></div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-[#111827] text-center">
-    <h2 class="text-2xl font-bold mb-4">📬 Contact Me</h2>
-    <p class="text-gray-400 mb-2">Let’s collaborate or discuss a project.</p>
-    <a href="mailto:rodriguez.lumier@gmail.com" class="text-blue-400 underline">rodriguez.lumier@gmail.com</a>
-    <div class="mt-4 space-x-4">
-      <a href="https://linkedin.com/in/lumrodri" target="_blank" class="text-blue-400 underline hover:text-blue-300">LinkedIn</a>
-      <a href="https://github.com/FundsCatcher" target="_blank" class="text-blue-400 underline hover:text-blue-300">GitHub</a>
-    </div>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6 bg-[#111827] text-center">
+  <h2 class="text-2xl font-bold mb-4">📬 Contact Me</h2>
+  <p class="text-gray-400 mb-2">Let’s collaborate or discuss a project.</p>
+  <a href="mailto:rodriguez.lumier@gmail.com" class="text-blue-400 underline">rodriguez.lumier@gmail.com</a>
+  <div class="mt-4 space-x-4">
+    <a href="https://linkedin.com/in/lumrodri" target="_blank" class="text-blue-400 underline hover:text-blue-300">LinkedIn</a>
+    <a href="https://github.com/FundsCatcher" target="_blank" class="text-blue-400 underline hover:text-blue-300">GitHub</a>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-sm text-gray-500 bg-[#0F172A]">
-    © 2025 Lumier Rodriguez. All rights reserved.
-  </footer>
+<!-- FOOTER -->
+<footer class="text-center py-6 text-sm text-gray-500 bg-[#0F172A]">
+  © 2025 Lumier Rodriguez. All rights reserved.
+</footer>
 
-  <!-- ScrollSpy Script -->
-  <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = [...navLinks].map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+<!-- ScrollSpy Script -->
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = [...navLinks].map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
 
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
     });
-  </script>
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
