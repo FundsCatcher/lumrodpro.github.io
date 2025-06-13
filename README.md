@@ -47,13 +47,6 @@ It features a sleek scroll-reveal layout, skill icons, certification links, and 
 
 ---
 
-## ✨ Preview
-
-![Preview Screenshot](./assets/banner.png)  
-(*Project thumbnails shown in the Works section via Figma / GitHub links*)
-
----
-
 ## 📁 Folder Structure
 - `index.html` – main file for the site
 - `styles.css` – custom styles and overrides
