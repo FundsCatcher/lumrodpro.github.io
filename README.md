@@ -1,4 +1,4 @@
-# 🌐 Lumier Rodriguez – AI Workflow & SaaS Portfolio
+# 🌐 Lumier Rodriguez – Technical Project Manager | Business Analyst | SaaS & Healthcare Integration Specialist
 
 Welcome to my personal portfolio — a professional, modern single-page site showcasing my skills, certifications, and selected work in business analysis, automation, and SaaS implementation.
 
