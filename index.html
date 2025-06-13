@@ -1,10 +1,10 @@
 <!--
-  ✅ Version 2.0 (May 5, 2025)
--💎 Hero with blurred overlay + gradient
--🧊 Glass-style cards
--📱 Fully responsive grid sections
--🌈 Gradient text and hover effects
--🔗 Smooth scroll and improved nav structure
+  ✅ Version 3.0 (6/12/2025)
+✅ Sticky navbar with pill buttons
+✅ Hero (refined & simplified)
+✅ Instagram-style “Recent Works” gallery
+✅ Slimmed-down Skills + Journey
+✅ Clean Contact section
 -->
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lumier Rodriguez | AI Workflow & SaaS Portfolio</title>
+  <title>Lumier Rodriguez | Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -25,207 +25,137 @@
           },
           colors: {
             primary: '#38BDF8',
-            darkbg: '#0F172A',
+            darkbg: '#0F172A'
           },
-          backgroundImage: {
-            'gradient-glass': 'linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.02))'
-          }
         }
       }
-    }
+    };
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    .nav-link.active {
+      background-color: #38bdf8;
+      color: #0F172A;
+      font-weight: 700;
+    }
+  </style>
 </head>
-<style>
-  .nav-link.active {
-  background-color: #38bdf8;
-  color: #0F172A;
-  font-weight: 700;
-}
-</style>
-
 
 <body class="bg-darkbg text-white font-sans">
 
-<header class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur border-b border-blue-500/20 shadow-sm">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-sm text-white">
-    <div class="font-bold text-lg text-cyan-400">Lumier Rodriguez</div>
-    <ul class="flex gap-4">
-  <li><a href="#skills" class="nav-link px-4 py-2 rounded-full text-sm font-medium bg-transparent border border-blue-500 text-white hover:bg-blue-500 transition">Skills</a></li>
-  <li><a href="#journey" class="nav-link px-4 py-2 rounded-full text-sm font-medium bg-transparent border border-blue-500 text-white hover:bg-blue-500 transition">Journey</a></li>
-  <li><a href="#contact" class="nav-link px-4 py-2 rounded-full text-sm font-medium bg-transparent border border-blue-500 text-white hover:bg-blue-500 transition">Contact</a></li>
-</ul>
-  </nav>
-</header>
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur border-b border-blue-500/20 shadow-sm">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-sm text-white">
+      <div class="font-bold text-lg text-cyan-400">Lumier Rodriguez</div>
+      <ul class="flex gap-4">
+        <li><a href="#work" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Works</a></li>
+        <li><a href="#skills" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Skills</a></li>
+        <li><a href="#journey" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Journey</a></li>
+        <li><a href="#contact" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- HERO Section (Modern & Controlled) -->
-<section class="relative overflow-hidden">
-  <!-- Banner Image with Fixed Max Height -->
-  <div class="relative w-full max-h-[300px] sm:max-h-[340px] md:max-h-[360px] lg:max-h-[400px] overflow-hidden">
-    <img src="assets/banner.png" alt="Banner" class="w-full h-auto object-center opacity-20 mx-auto" />
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F172A]"></div>
-  </div>
-
-  <!-- Hero Text -->
-  <div class="relative text-center z-10 max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-      <span class="block text-gray-300">I turn complex processes into</span>
-      <span class="block bg-gradient-to-r from-blue-400 to-cyan-500 text-transparent bg-clip-text">streamlined, scalable workflows.</span>
-    </h1>
-    <p class="mt-2 text-base md:text-lg text-gray-300">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
-    <div class="mt-6 flex justify-center gap-4">
-      <a href="#journey" class="px-5 py-2 bg-primary text-white rounded hover:bg-blue-500 transition">My Journey</a>
-      <a href="#skills" class="px-5 py-2 border border-primary rounded hover:bg-primary hover:text-white transition">My Skills</a>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="relative w-full max-h-[360px] overflow-hidden">
+      <img src="assets/banner.png" alt="Banner" class="w-full h-auto object-center opacity-20 mx-auto" />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F172A]"></div>
     </div>
-  </div>
-</section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 px-6 bg-[#111827]">
-    <h2 class="text-3xl font-bold text-center mb-12">🚀 My Skills</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      <div class="backdrop-blur-md bg-gradient-glass rounded-lg p-6 shadow border border-blue-500/20">🛠️ <strong>Tools</strong><br>Jira, GitHub, Notion, Figma, Make</div>
-      <div class="backdrop-blur-md bg-gradient-glass rounded-lg p-6 shadow border border-blue-500/20">💻 <strong>Tech</strong><br>HTML, CSS, JavaScript, SQL, YAML, Power BI</div>
-      <div class="backdrop-blur-md bg-gradient-glass rounded-lg p-6 shadow border border-blue-500/20">🔁 <strong>Processes</strong><br>Agile, Scrum, Kanban, Six Sigma</div>
-      <div class="backdrop-blur-md bg-gradient-glass rounded-lg p-6 shadow border border-blue-500/20">🌐 <strong>Domains</strong><br>SaaS, HealthTech, Government</div>
+    <div class="text-center py-10 px-4 max-w-3xl mx-auto relative z-10">
+      <h1 class="text-4xl font-extrabold mb-4">
+        <span class="text-gray-300">I turn complex processes into</span><br>
+        <span class="bg-gradient-to-r from-blue-400 to-cyan-500 text-transparent bg-clip-text">streamlined, scalable workflows.</span>
+      </h1>
+      <p class="mt-2 text-lg text-gray-400">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="py-20 px-6 bg-darkbg">
-    <h2 class="text-3xl font-bold text-center mb-10">📂 Case Studies</h2>
-    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-      <div class="bg-gradient-glass border border-cyan-500/20 backdrop-blur p-6 rounded-lg shadow-lg">
-        <h3 class="text-cyan-300 font-semibold text-lg mb-2">SaaS Workflow: Claims Process</h3>
-        <p class="text-gray-400 mb-2 text-sm">Workflow + API Mapping for CHHA intake logic</p>
-        <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API?node-id=12-241" class="underline text-blue-400">View Diagram</a>
+  <!-- Recent Works -->
+  <section id="work" class="py-20 px-6 bg-[#0F172A] text-white">
+    <h2 class="text-3xl font-bold text-center mb-10">📷 Recent Works</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- Work Cards -->
+      <div class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+        <img src="assets/project1-thumb.jpg" alt="Project 1" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+          <div class="text-center">
+            <h3 class="font-semibold text-lg text-white">Claims Automation</h3>
+            <p class="text-sm text-gray-300">Workflow logic via Figma</p>
+          </div>
+        </div>
       </div>
-      <div class="bg-gradient-glass border border-purple-500/20 backdrop-blur p-6 rounded-lg shadow-lg">
-        <h3 class="text-purple-300 font-semibold text-lg mb-2">Make Sync: Salesforce + Clockify</h3>
-        <p class="text-gray-400 mb-2 text-sm">Used Make to sync Salesforce + Clockify to automate reporting.</p>
-        <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync?node-id=10-118" class="underline text-blue-400">FigJam Link</a>
+      <div class="group relative rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+        <img src="assets/project2-thumb.jpg" alt="Project 2" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+          <div class="text-center">
+            <h3 class="font-semibold text-lg text-white">Salesforce Sync</h3>
+            <p class="text-sm text-gray-300">Automation via Make</p>
+          </div>
+        </div>
       </div>
+      <!-- Add more as needed -->
     </div>
   </section>
 
-  <!-- Journey Section -->
-<section id="journey" class="py-20 px-6 bg-[#0b1120] text-white">
-  <h2 class="text-3xl font-bold text-center mb-16">📌 Professional Journey</h2>
-  <div class="relative max-w-5xl mx-auto">
-    <!-- Vertical line -->
-    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 to-cyan-500"></div>
-
-    <!-- Entry 1 -->
-    <div class="md:flex items-start mb-12 relative">
-      <div class="md:w-1/2 md:pr-8 text-right">
-        <div class="bg-slate-800 p-6 rounded-lg shadow border border-blue-400/30 backdrop-blur-md">
-          <h3 class="font-bold text-lg">Neo Innovations</h3>
-          <p class="text-blue-400 text-sm">Technical BA, 2025</p>
-          <p class="mt-2 text-gray-300">Led documentation for insurance-integrated SaaS platform with HIPAA compliance.</p>
-        </div>
-      </div>
-      <div class="hidden md:block w-10 shrink-0 flex justify-center items-center relative">
-        <div class="w-4 h-4 bg-blue-500 border-4 border-white rounded-full z-10"></div>
-      </div>
-      <div class="md:w-1/2"></div>
-    </div>
-
-    <!-- Entry 2 -->
-    <div class="md:flex items-start mb-12 relative">
-      <div class="md:w-1/2"></div>
-      <div class="hidden md:block w-10 shrink-0 flex justify-center items-center relative">
-        <div class="w-4 h-4 bg-blue-500 border-4 border-white rounded-full z-10"></div>
-      </div>
-      <div class="md:w-1/2 md:pl-8">
-        <div class="bg-slate-800 p-6 rounded-lg shadow border border-blue-400/30 backdrop-blur-md">
-          <h3 class="font-bold text-lg">Amsive</h3>
-          <p class="text-blue-400 text-sm">SaaS Consultant, 2024–2025</p>
-          <p class="mt-2 text-gray-300">Upgraded enterprise reporting workflows, user mockups, and stakeholder UAT cycles.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Entry 3 -->
-    <div class="md:flex items-start mb-12 relative">
-      <div class="md:w-1/2 md:pr-8 text-right">
-        <div class="bg-slate-800 p-6 rounded-lg shadow border border-blue-400/30 backdrop-blur-md">
-          <h3 class="font-bold text-lg">Zelis</h3>
-          <p class="text-blue-400 text-sm">Workflow Analyst, 2023–2024</p>
-          <p class="mt-2 text-gray-300">Configured automation systems and created solution briefs for enterprise clients.</p>
-        </div>
-      </div>
-      <div class="hidden md:block w-10 shrink-0 flex justify-center items-center relative">
-        <div class="w-4 h-4 bg-blue-500 border-4 border-white rounded-full z-10"></div>
-      </div>
-      <div class="md:w-1/2"></div>
-    </div>
-
-    <!-- Entry 4 -->
-    <div class="md:flex items-start mb-12 relative">
-      <div class="md:w-1/2"></div>
-      <div class="hidden md:block w-10 shrink-0 flex justify-center items-center relative">
-        <div class="w-4 h-4 bg-blue-500 border-4 border-white rounded-full z-10"></div>
-      </div>
-      <div class="md:w-1/2 md:pl-8">
-        <div class="bg-slate-800 p-6 rounded-lg shadow border border-blue-400/30 backdrop-blur-md">
-          <h3 class="font-bold text-lg">HHAeXchange</h3>
-          <p class="text-blue-400 text-sm">Sr. Implementation Analyst, 2019–2023</p>
-          <p class="mt-2 text-gray-300">Directed Agile implementations, integrated ADP/Workday data, led documentation.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Contact Section -->
-  <section class="py-20 px-6 bg-[#111827] text-center">
-    <h2 class="text-3xl font-bold mb-6">📬 Contact Me</h2>
-    <p class="text-gray-300">Let’s collaborate or discuss a project.</p>
-    <p class="mt-2 text-blue-400"><a href="mailto:rodriguez.lumier@gmail.com" class="underline">rodriguez.lumier@gmail.com</a></p>
-    <div class="flex justify-center mt-4 space-x-4 text-blue-400">
-      <a href="https://linkedin.com/in/lumrodri" target="_blank" class="hover:text-blue-300 underline">LinkedIn</a>
-      <a href="https://github.com/FundsCatcher" target="_blank" class="hover:text-blue-300 underline">GitHub</a>
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-[#111827] text-center">
+    <h2 class="text-2xl font-bold mb-10">🚀 My Skills</h2>
+    <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="bg-slate-800 p-6 rounded shadow">🛠️ <strong>Tools</strong><br>Jira, GitHub, Notion, Figma, Make</div>
+      <div class="bg-slate-800 p-6 rounded shadow">💻 <strong>Tech</strong><br>HTML, CSS, JavaScript, SQL, YAML, Power BI</div>
+      <div class="bg-slate-800 p-6 rounded shadow">🔁 <strong>Processes</strong><br>Agile, Scrum, Kanban, Six Sigma</div>
+      <div class="bg-slate-800 p-6 rounded shadow">🌐 <strong>Domains</strong><br>SaaS, HealthTech, Government</div>
     </div>
   </section>
 
+  <!-- Journey -->
+  <section id="journey" class="py-20 px-6 bg-[#0b1120] text-white">
+    <h2 class="text-3xl font-bold text-center mb-10">📌 Journey</h2>
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>Neo Innovations</strong> — Technical BA, 2025<br><span class="text-gray-400 text-sm">Insurance SaaS docs, HIPAA workflows</span></div>
+      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>Amsive</strong> — SaaS Consultant, 2024–2025<br><span class="text-gray-400 text-sm">UAT flows, report revamps, user design</span></div>
+      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>Zelis</strong> — Workflow Analyst, 2023–2024<br><span class="text-gray-400 text-sm">Client automation & briefs</span></div>
+      <div class="bg-slate-800 p-6 rounded shadow-md"><strong>HHAeXchange</strong> — Sr. Analyst, 2019–2023<br><span class="text-gray-400 text-sm">Workday integrations, agile docs</span></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-[#111827] text-center">
+    <h2 class="text-2xl font-bold mb-4">📬 Contact Me</h2>
+    <p class="text-gray-400 mb-2">Let’s collaborate or discuss a project.</p>
+    <a href="mailto:rodriguez.lumier@gmail.com" class="text-blue-400 underline">rodriguez.lumier@gmail.com</a>
+    <div class="mt-4 space-x-4">
+      <a href="https://linkedin.com/in/lumrodri" target="_blank" class="text-blue-400 underline hover:text-blue-300">LinkedIn</a>
+      <a href="https://github.com/FundsCatcher" target="_blank" class="text-blue-400 underline hover:text-blue-300">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="text-center py-6 text-sm text-gray-500 bg-[#0F172A]">
     © 2025 Lumier Rodriguez. All rights reserved.
   </footer>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5YN1Z5JG55"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-5YN1Z5JG55');
-</script>
+  <!-- ScrollSpy Script -->
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = [...navLinks].map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
 
-<script>
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = [...navLinks]
-    .map(link => document.querySelector(link.getAttribute('href')))
-    .filter(Boolean); // ensures no null elements break the loop
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-      }
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
     });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
+  </script>
 </body>
 </html>
