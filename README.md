@@ -1,4 +1,4 @@
-# 🌐 Lumier Rodriguez – AI Workflow Strategist & Business Analyst Portfolio
+# 🌐 Lumier Rodriguez – AI Workflow Strategist & Program Manager Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-success-brightgreen?style=flat-square&logo=github)](https://fundscatcher.github.io)
 [![Last Commit](https://img.shields.io/badge/last%20commit-today-purple?style=flat-square)](https://github.com/FundsCatcher/lumrodpro.github.io/commits/main)
@@ -67,7 +67,7 @@ It features a sleek scroll-reveal layout, skill icons, certification links, and 
 
 ## 📜 Changelog
 
-**Version 2.0 – 2025-06-12**
+**Version 2.0.0 – 2025-06-12**
 - 🔄 Replaced emoji badges with real logos (SimpleIcons)
 - ✨ Added ScrollReveal animations to all sections
 - 🧠 Rebuilt Skills and Certifications using Tailwind grid
