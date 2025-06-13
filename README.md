@@ -1,26 +1,26 @@
 # 🌐 Lumier Rodriguez – AI Workflow Strategist & Program Manager Portfolio
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-success-brightgreen?style=flat-square&logo=github)](https://fundscatcher.github.io)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-success-brightgreen?style=flat-square&logo=github)](https://fundscatcher.github.io/lumrodpro.github.io/)
 [![Last Commit](https://img.shields.io/badge/last%20commit-today-purple?style=flat-square)](https://github.com/FundsCatcher/lumrodpro.github.io/commits/main)
-[![HTML](https://img.shields.io/badge/HTML-100%25-orange?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-✓-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-enabled-yellow?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML](https://img.shields.io/badge/HTML-100%25-orange?style=flat-square&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-active-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-enabled-yellow?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![ScrollReveal](https://img.shields.io/badge/ScrollReveal-animation-blue?style=flat-square)](https://scrollrevealjs.org/)
 [![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](LICENSE)
 
 ---
 
-## 🚀 Live Demo
+## 🎯 Live Demo
 
-👉 **[View My Portfolio Website Here](https://fundscatcher.github.io/lumrodpro.github.io/)**  
-This project is deployed via GitHub Pages and optimized for performance, accessibility, and SEO.
+👉 **[Visit My Portfolio Site](https://fundscatcher.github.io/lumrodpro.github.io/)**  
+Optimized for performance, accessibility, and showcase of Technical Program Management excellence.
 
 ---
 
-## 📦 About This Project
+## 🧠 About This Project
 
-A professional, clean, and animated portfolio to showcase my work as a Business Analyst & AI Workflow Strategist.  
-It features a sleek scroll-reveal layout, skill icons, certification links, and a modern SaaS-style project grid.
+A personal portfolio designed to demonstrate TPM-level delivery, documentation precision, and technical fluency.  
+Features animated skill tiles, interactive certifications, and case study links via GitHub, Figma, and Google Docs.
 
 ---
 
@@ -30,44 +30,40 @@ It features a sleek scroll-reveal layout, skill icons, certification links, and 
 - [Tailwind CSS](https://tailwindcss.com/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [ScrollReveal.js](https://scrollrevealjs.org/)
-- [SimpleIcons](https://simpleicons.org/) for tool/cert logos
+- [Figma](https://www.figma.com/)
+- [Google Docs (View-Only)](https://docs.google.com/)
 - Hosted on [GitHub Pages](https://pages.github.com/)
 
 ---
 
-## 🎯 Key Features
+## 🚀 Key Features
 
-- ✅ Sticky navigation with active section highlighting
-- ✅ ScrollReveal animations on all sections
-- ✅ Tool grid with platform logos
-- ✅ Certification tiles with hover tooltips and external links
-- ✅ Instagram-style visual project feed
-- ✅ Fully responsive layout (planned for future)
-- ✅ Lighthouse-optimized: **100% Performance / Accessibility / SEO**
+- ✅ ScrollReveal tile animations on certs & projects
+- ✅ Skills & certs styled as SaaS-like interactive badges
+- ✅ View-only embedded work via Google Docs
+- ✅ Fully responsive layout and modern UX
+- ✅ 100% Lighthouse scores for performance, SEO & a11y
 
 ---
 
 ## 📁 Folder Structure
-- `index.html` – main file for the site
-- `styles.css` – custom styles and overrides
+
+- `index.html` – main portfolio file
+- `styles.css` – Tailwind overrides & custom layout
 - `assets/`
-  - `img/` – project thumbnails, logos, icons
-  - `js/`
-    - `scrollreveal.min.js` – animation library
-    - `main.js` – animation setup and config
-  - `banner.png` – background hero image
+  - `img/` – banners, project thumbnails, skill icons
+  - `js/` – `scrollreveal.min.js`, `main.js`
+  - `banner.png` – homepage hero
+- `README.md`, `CHANGES.md`
 
 ---
 
-## 📜 Changelog
+## 🧪 Case Studies / Work Examples
 
-**Version 2.0.0 – 2025-06-12**
-- 🔄 Replaced emoji badges with real logos (SimpleIcons)
-- ✨ Added ScrollReveal animations to all sections
-- 🧠 Rebuilt Skills and Certifications using Tailwind grid
-- 💼 Created scroll-triggered project showcase
-- 🎨 Improved hover interactions and button polish
-- ✅ Lighthouse scores: 100% across the board
+- 🧠 **Claims Automation** – [Figma Link](https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API)
+- 🔁 **Salesforce Sync via Zapier** – [Figma Link](https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync)
+- 🎲 **Dice Roller Web App (Live)** – [Live Demo](https://fundscatcher.github.io/dice_roller.html)
+- 📄 **Program Roadmap (View-Only Doc)** – [Google Doc](https://docs.google.com/document/d/YOUR_DOC_ID/view)
 
 ---
 
