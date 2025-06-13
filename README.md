@@ -63,7 +63,7 @@ Features animated skill tiles, interactive certifications, and case study links 
 - 🧠 **Claims Automation** – [Figma Link](https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API)
 - 🔁 **Salesforce Sync via Zapier** – [Figma Link](https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync)
 - 🎲 **Dice Roller Web App (Live)** – [Live Demo](https://fundscatcher.github.io/dice_roller.html)
-- 📄 **Program Roadmap (View-Only Doc)** – [Google Doc]([https://docs.google.com/document/d/YOUR_DOC_ID/view](https://docs.google.com/document/d/1t1WB_tP-JnOBRJm5KyjhHis2XJnZtypcQainS5Zr-eA/edit?usp=sharing)
+- 📄 **Program Roadmap (View-Only Doc)** – [Google Doc](https://docs.google.com/document/d/1t1WB_tP-JnOBRJm5KyjhHis2XJnZtypcQainS5Zr-eA/edit?usp=sharing)
 
 ---
 
