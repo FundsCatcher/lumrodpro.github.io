@@ -55,16 +55,14 @@ It features a sleek scroll-reveal layout, skill icons, certification links, and 
 ---
 
 ## 📁 Folder Structure
-.
-├── index.html
-├── styles.css
-├── assets
-│   ├── img
-│   │   └── (project images + platform icons)
-│   ├── js
-│   │   ├── scrollreveal.min.js
-│   │   └── main.js
-│   └── banner.png
+- `index.html` – main file for the site
+- `styles.css` – custom styles and overrides
+- `assets/`
+  - `img/` – project thumbnails, logos, icons
+  - `js/`
+    - `scrollreveal.min.js` – animation library
+    - `main.js` – animation setup and config
+  - `banner.png` – background hero image
 
 ---
 
