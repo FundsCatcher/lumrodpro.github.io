@@ -58,9 +58,12 @@ It features a sleek scroll-reveal layout, skill icons, certification links, and 
 .
 ├── index.html
 ├── styles.css
-├── /assets
-│   ├── /img         → project images + platform icons
-│   ├── /js          → scrollreveal.min.js + main.js
+├── assets
+│   ├── img
+│   │   └── (project images + platform icons)
+│   ├── js
+│   │   ├── scrollreveal.min.js
+│   │   └── main.js
 │   └── banner.png
 
 ---
