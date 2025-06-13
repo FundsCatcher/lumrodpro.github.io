@@ -66,6 +66,17 @@ It features a sleek scroll-reveal layout, skill icons, certification links, and 
 
 ---
 
+## 🧪 Run Locally
+
+To preview or edit this portfolio on your own machine:
+
+```bash
+git clone https://github.com/FundsCatcher/lumrodpro.github.io.git
+cd lumrodpro.github.io
+open index.html
+
+---
+
 ## 📜 Changelog
 
 **Version 2.0.0 – 2025-06-12**
