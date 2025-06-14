@@ -1,10 +1,11 @@
-# 📦 Changelog
+# 📝 Changelog
 
 All notable changes to this project will be documented here.
 
 ---
-
-## [v1.0.0] – 2025-05-04  
+## Version: `v1.0.0`  
+**Date:** 2025-05-04  
+**Author:** Lumier Rodriguez (FundsCatcher) 
 🔹 **Initial Release: ScrollReveal Portfolio**
 
 ### ✨ Added
@@ -27,9 +28,9 @@ All notable changes to this project will be documented here.
 - Section for certifications badges with logos
 - Mobile nav toggle
 
-# 📦 Change Log
+# 📝 Change Log
 
-## Version: `v2.0` – Visual Grid & Certifications Upgrade  
+## Version: `v2.0.0`  
 **Date:** 2025-06-12  
 **Author:** Lumier Rodriguez (FundsCatcher)
 
@@ -86,8 +87,16 @@ This version overhauls the layout and visual structure of the portfolio to impro
 - Future work: Mobile layout responsiveness & modal cert previews
 
 ---
+# 📝 CHANGELOG
 
-## [3.0.0] - 2025-06-14
+All notable changes to this project will be documented in this file.  
+This project adheres to **semantic versioning** and MySpace-era enthusiasm 🤘
+
+---
+
+## Version: `v3.0.0`
+**Date:** 2025-06-14  
+**Author:** Lumier Rodriguez (FundsCatcher)
 
 ### ✨ Added
 - Created full **retro-modern MySpace-inspired portfolio** layout.
@@ -116,4 +125,3 @@ This version overhauls the layout and visual structure of the portfolio to impro
 - Auto-randomizer for “Top Friends”
 
 ---
-
