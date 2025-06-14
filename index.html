@@ -4,24 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lumier Rodriguez | MySpace Portfolio</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-
-  <style>
-    .tile {
-      transition: all 0.3s ease-in-out;
-    }
-    .tile:hover {
-      transform: scale(1.03);
-      filter: brightness(1.1);
-    }
-    .retro-frame {
-      border: 2px solid #00FFFF33;
-      background-color: #1e293b;
-      border-radius: 8px;
-    }
-  </style>
 </head>
 <body class="bg-[#0F172A] text-white font-sans">
 
@@ -33,193 +17,111 @@
       <li><a href="#about" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">About</a></li>
       <li><a href="#skills" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Skills</a></li>
       <li><a href="#certifications" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Certifications</a></li>
-      <li><a href="#works" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Projects</a></li>
+      <li><a href="#projects" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Projects</a></li>
       <li><a href="#friends" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Friends</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- BANNER -->
-<section class="relative overflow-hidden">
-  <img src="assets/img/banner.jpg" alt="Banner" class="w-full h-64 object-cover opacity-20" />
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F172A]"></div>
-</section>
-
-<!-- PAGE CONTENT WRAPPER -->
-<div class="max-w-6xl mx-auto mt-8 px-6 flex flex-col lg:flex-row gap-6">
+<!-- PAGE CONTENT -->
+<div class="max-w-6xl mx-auto mt-10 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
   <!-- LEFT SIDEBAR -->
-  <aside class="lg:w-1/3 space-y-6">
-    <div class="retro-frame p-6 text-center">
-      <img src="3ef11826-b791-4c35-bc3e-77357c302b21.png" alt="Avatar" class="w-32 h-32 mx-auto rounded-full border-4 border-cyan-400 mb-4"/>
+  <aside class="space-y-6">
+
+    <!-- PROFILE -->
+    <div class="bg-slate-900 border border-cyan-500 p-6 rounded-lg text-center">
+      <div class="w-28 h-28 mx-auto mb-4 border-2 border-cyan-400 rounded-full flex items-center justify-center">
+        <span class="text-sm text-cyan-400">Avatar</span>
+      </div>
       <h2 class="text-xl font-bold text-cyan-400">Lumier Rodriguez</h2>
-      <p class="text-gray-400 text-sm mt-1">AI Workflow Architect</p>
-      <p class="italic text-sm text-pink-300 mt-2">“Turning complexity into clarity.”</p>
+      <p class="text-sm text-gray-300">AI Workflow Architect</p>
+      <p class="italic text-sm text-pink-300 mt-2">"Turning complexity into clarity."</p>
       <div class="mt-4 text-sm">
         <p><strong>Mood:</strong> 💡 Inspired</p>
         <p><strong>Status:</strong> Building new automations 🚀</p>
       </div>
     </div>
+
+    <!-- CONTACT ME -->
+    <div class="p-4 bg-slate-900 border border-cyan-600 rounded-lg text-sm">
+      <h3 class="text-cyan-400 font-bold mb-2 text-center">📬 Contact Me</h3>
+      <ul class="space-y-2 text-white">
+        <li><a href="mailto:rodriguez.lumier@gmail.com" class="flex items-center gap-2 hover:underline text-blue-300">📧 Email</a></li>
+        <li><a href="https://linkedin.com/in/lumrodri" target="_blank" class="flex items-center gap-2 hover:underline text-blue-300">💼 LinkedIn</a></li>
+        <li><a href="https://github.com/FundsCatcher" target="_blank" class="flex items-center gap-2 hover:underline text-blue-300">🐙 GitHub</a></li>
+        <li><a href="#projects" class="flex items-center gap-2 hover:underline text-blue-300">🧪 View Projects</a></li>
+        <li><a href="#friends" class="flex items-center gap-2 hover:underline text-blue-300">👯 See Friends</a></li>
+      </ul>
+    </div>
+
   </aside>
 
-  <!-- RIGHT MAIN CONTENT -->
-  <main class="lg:w-2/3 space-y-12">
+  <!-- MAIN CONTENT -->
+  <main class="md:col-span-2 space-y-12">
 
     <!-- ABOUT -->
-    <section id="about" class="retro-frame p-6">
-      <h2 class="text-2xl font-bold mb-4 text-blue-400">👩‍💻 About Me</h2>
-      <p class="text-gray-300">
-        I turn complex processes into streamlined, scalable workflows.
-        Business Analyst • SaaS Specialist • AI Integrator. I believe in crafting seamless systems that empower teams and users alike.
-      </p>
+    <section id="about" class="bg-slate-800 p-6 rounded-lg border border-blue-500">
+      <h2 class="text-xl font-bold text-blue-400 mb-2">👩‍💻 About Me</h2>
+      <p class="text-gray-300">I turn complex processes into streamlined, scalable workflows. I specialize in Business Analysis, SaaS, and AI implementations to transform team performance and digital operations.</p>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="retro-frame p-6">
-      <h2 class="text-2xl font-bold mb-8 text-blue-400">🛠️ My Skills</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- COPY-PASTED SKILL TILES FROM ORIGINAL CODE -->
-        <div class="bg-slate-800 p-4 rounded shadow tile">
-          <div class="text-sm uppercase text-gray-400 mb-1">CRM</div>
-          <div class="text-lg font-semibold text-white">Salesforce</div>
+    <!-- PROJECTS -->
+    <section id="projects" class="bg-slate-800 p-6 rounded-lg border border-blue-500">
+      <h2 class="text-xl font-bold text-blue-400 mb-6">🧪 Featured Projects</h2>
+      <div class="space-y-8">
+
+        <!-- Project 1 -->
+        <div class="bg-slate-700 p-4 rounded-lg flex flex-col md:flex-row gap-4 tile">
+          <img src="assets/img/claims-thumb.jpg" alt="Claims Automation" class="w-full md:w-1/3 object-cover rounded shadow" />
+          <div>
+            <h3 class="text-cyan-300 font-bold text-lg">Claims Automation</h3>
+            <p class="text-sm text-gray-300 mt-1">Workflow mapping, API intake, and UI planning for enterprise claims automation.</p>
+            <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API" class="inline-block mt-3 text-sm px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded">View on Figma</a>
+          </div>
         </div>
-        <div class="bg-slate-800 p-4 rounded shadow tile">
-          <div class="text-sm uppercase text-gray-400 mb-1">Programming</div>
-          <div class="text-lg font-semibold text-white">Python (Basic)</div>
+
+        <!-- Project 2 -->
+        <div class="bg-slate-700 p-4 rounded-lg flex flex-col md:flex-row gap-4 tile">
+          <img src="assets/img/salesforce-thumb.jpg" alt="Salesforce Sync" class="w-full md:w-1/3 object-cover rounded shadow" />
+          <div>
+            <h3 class="text-cyan-300 font-bold text-lg">Salesforce Sync via Zapier</h3>
+            <p class="text-sm text-gray-300 mt-1">No-code automation for Salesforce using Clockify, Zapier, and structured flow design.</p>
+            <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync" class="inline-block mt-3 text-sm px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded">View on Figma</a>
+          </div>
         </div>
-        <div class="bg-slate-800 p-4 rounded shadow tile">
-          <div class="text-sm uppercase text-gray-400 mb-1">AI Assistant</div>
-          <div class="text-lg font-semibold text-white">ChatGPT</div>
+
+        <!-- Project 3 -->
+        <div class="bg-slate-700 p-4 rounded-lg flex flex-col md:flex-row gap-4 tile">
+          <img src="assets/img/dice-thumb.jpg" alt="Dice Roller" class="w-full md:w-1/3 object-cover rounded shadow" />
+          <div>
+            <h3 class="text-cyan-300 font-bold text-lg">🎲 Dice Roller Web App</h3>
+            <p class="text-sm text-gray-300 mt-1">Live JavaScript app for digital dice rolling simulations. Clean, lightweight, and interactive.</p>
+            <a href="https://fundscatcher.github.io/dice_roller.html" class="inline-block mt-3 text-sm px-4 py-2 bg-green-600 hover:bg-green-500 rounded">Try App</a>
+          </div>
         </div>
-        <div class="bg-slate-800 p-4 rounded shadow tile">
-          <div class="text-sm uppercase text-gray-400 mb-1">Testing Tools</div>
-          <div class="text-lg font-semibold text-white">Postman & Swagger</div>
+
+        <!-- Project 4 -->
+        <div class="bg-slate-700 p-4 rounded-lg flex flex-col md:flex-row gap-4 tile">
+          <img src="assets/img/implementation-scenario.jpg" alt="Implementation Scenario" class="w-full md:w-1/3 object-cover rounded shadow" />
+          <div>
+            <h3 class="text-cyan-300 font-bold text-lg">Implementation Plan (GDoc)</h3>
+            <p class="text-sm text-gray-300 mt-1">Google Doc timeline and scope demo from a healthcare project management workflow.</p>
+            <a href="https://docs.google.com/document/d/1t1WB_tP-JnOBRJm5KyjhHis2XJnZtypcQainS5Zr-eA/edit?tab=t.0" class="inline-block mt-3 text-sm px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded">View Doc</a>
+          </div>
         </div>
-        <div class="bg-slate-800 p-4 rounded shadow tile">
-          <div class="text-sm uppercase text-gray-400 mb-1">Automation</div>
-          <div class="text-lg font-semibold text-white">Make / Zapier</div>
-        </div>
-        <div class="bg-slate-800 p-4 rounded shadow tile">
-          <div class="text-sm uppercase text-gray-400 mb-1">BI Tools</div>
-          <div class="text-lg font-semibold text-white">Power BI / Tableau</div>
-        </div>
+
       </div>
     </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="retro-frame p-6">
-      <h2 class="text-2xl font-bold mb-8 text-blue-400">🎓 Certifications</h2>
-      <div class="grid md:grid-cols-3 gap-4 text-left">
-        <!-- Certifications copied from original structure -->
-        <a href="https://www.linkedin.com/learning/certificates/71afd0a79a..." target="_blank" class="tile bg-slate-800 p-4 rounded shadow text-white hover:scale-105 transition">
-          <span class="bg-gray-300 text-black px-2 py-1 text-xs font-bold rounded">AI</span>
-          <div>AI & Business Strategy</div>
-        </a>
-        <div class="tile bg-yellow-400 text-black p-4 rounded shadow hover:scale-105 transition">
-          <span class="bg-white text-black px-2 py-1 text-xs font-bold rounded">PMP</span>
-          <div>Certification (Update)</div>
-        </div>
-        <a href="https://www.linkedin.com/learning/certificates/9a7dd66..." target="_blank" class="tile bg-pink-500 text-white p-4 rounded shadow hover:scale-105 transition">
-          <span class="bg-white text-pink-500 px-2 py-1 text-xs font-bold rounded">Aha!</span>
-          <div>Product Mgmt</div>
-        </a>
-      </div>
-    </section>
-
-  <!-- PROJECTS -->
-<section id="works" class="py-20 px-6 bg-[#0F172A] text-white section">
-  <h2 class="text-3xl font-bold text-center text-blue-400 mb-10">🧪 Featured Projects</h2>
-  <div class="space-y-10 max-w-5xl mx-auto">
-
-    <!-- PROJECT CARD -->
-    <div class="bg-slate-800 p-6 rounded-lg shadow-lg tile flex flex-col md:flex-row gap-6">
-      <img src="assets/img/claims-thumb.jpg" alt="Claims Automation" class="w-full md:w-1/3 object-cover rounded-md shadow" />
-      <div class="flex-1">
-        <h3 class="text-xl font-bold text-cyan-300">Claims Automation</h3>
-        <p class="text-gray-300 text-sm mt-2">Workflow mapping, API intake, and UI planning using Figma boards for enterprise claims processing.</p>
-        <div class="mt-4 flex gap-3 text-xs text-gray-400 uppercase">
-          <span>Figma</span>
-          <span>UX Mapping</span>
-          <span>API Design</span>
-        </div>
-        <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API" target="_blank"
-           class="inline-block mt-4 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold rounded">View Project</a>
-      </div>
-    </div>
-
-    <!-- REPEAT FOR OTHER PROJECTS BELOW -->
-    <div class="bg-slate-800 p-6 rounded-lg shadow-lg tile flex flex-col md:flex-row gap-6">
-      <img src="assets/img/salesforce-thumb.jpg" alt="Salesforce Sync" class="w-full md:w-1/3 object-cover rounded-md shadow" />
-      <div class="flex-1">
-        <h3 class="text-xl font-bold text-cyan-300">Salesforce Sync via Zapier</h3>
-        <p class="text-gray-300 text-sm mt-2">No-code automation for Salesforce data integration using Clockify and Zapier. End-to-end sync demonstration.</p>
-        <div class="mt-4 flex gap-3 text-xs text-gray-400 uppercase">
-          <span>Zapier</span>
-          <span>Automation</span>
-          <span>Clockify</span>
-        </div>
-        <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync" target="_blank"
-           class="inline-block mt-4 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold rounded">View Project</a>
-      </div>
-    </div>
-
-    <div class="bg-slate-800 p-6 rounded-lg shadow-lg tile flex flex-col md:flex-row gap-6">
-      <img src="assets/img/dice-thumb.jpg" alt="Dice Roller" class="w-full md:w-1/3 object-cover rounded-md shadow" />
-      <div class="flex-1">
-        <h3 class="text-xl font-bold text-cyan-300">🎲 Dice Roller Web App</h3>
-        <p class="text-gray-300 text-sm mt-2">Simple JS-powered dice generator hosted live. Lightweight and interactive UI for simulation-style testing.</p>
-        <div class="mt-4 flex gap-3 text-xs text-gray-400 uppercase">
-          <span>JavaScript</span>
-          <span>Frontend</span>
-          <span>Hosted Live</span>
-        </div>
-        <a href="https://fundscatcher.github.io/dice_roller.html" target="_blank"
-           class="inline-block mt-4 px-4 py-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold rounded">Try App</a>
-      </div>
-    </div>
-
-    <div class="bg-slate-800 p-6 rounded-lg shadow-lg tile flex flex-col md:flex-row gap-6">
-      <img src="assets/img/implementation-scenario.jpg" alt="Implementation Scenario" class="w-full md:w-1/3 object-cover rounded-md shadow" />
-      <div class="flex-1">
-        <h3 class="text-xl font-bold text-cyan-300">Implementation Plan (GDoc)</h3>
-        <p class="text-gray-300 text-sm mt-2">Timeline, stakeholder engagement, and resource planning demo using a real-world healthcare integration project.</p>
-        <div class="mt-4 flex gap-3 text-xs text-gray-400 uppercase">
-          <span>Google Docs</span>
-          <span>Timeline</span>
-          <span>PMO</span>
-        </div>
-        <a href="https://docs.google.com/document/d/1t1WB_tP-JnOBRJm5KyjhHis2XJnZtypcQainS5Zr-eA/edit?tab=t.0" target="_blank"
-           class="inline-block mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded">View Doc</a>
-      </div>
-    </div>
-
-  </div>
-</section>
 
     <!-- FRIENDS -->
-    <section id="friends" class="retro-frame p-6">
-      <h2 class="text-2xl font-bold text-pink-400 mb-6">👯 My Top Friends</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm">
-        <div class="tile bg-slate-800 p-4 rounded shadow">
-          <img src="https://i.pravatar.cc/100?u=1" class="rounded-full mx-auto mb-2" />
-          <div class="text-white font-semibold">Octocat</div>
-          <div class="text-gray-400">Mentor</div>
-        </div>
-        <div class="tile bg-slate-800 p-4 rounded shadow">
-          <img src="https://i.pravatar.cc/100?u=2" class="rounded-full mx-auto mb-2" />
-          <div class="text-white font-semibold">Ally Dev</div>
-          <div class="text-gray-400">JS Wizard</div>
-        </div>
-        <div class="tile bg-slate-800 p-4 rounded shadow">
-          <img src="https://i.pravatar.cc/100?u=3" class="rounded-full mx-auto mb-2" />
-          <div class="text-white font-semibold">Mia UX</div>
-          <div class="text-gray-400">Design Queen</div>
-        </div>
-        <div class="tile bg-slate-800 p-4 rounded shadow">
-          <img src="https://i.pravatar.cc/100?u=4" class="rounded-full mx-auto mb-2" />
-          <div class="text-white font-semibold">Zap Bro</div>
-          <div class="text-gray-400">Automation Ally</div>
-        </div>
+    <section id="friends" class="bg-slate-800 p-6 rounded-lg border border-blue-500">
+      <h2 class="text-xl font-bold text-pink-400 mb-4">👯 My Top Friends</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-sm">
+        <div><img src="https://i.pravatar.cc/100?u=1" class="rounded-full mx-auto mb-1" /><strong>Octocat</strong><br><span class="text-gray-400">Mentor</span></div>
+        <div><img src="https://i.pravatar.cc/100?u=2" class="rounded-full mx-auto mb-1" /><strong>Ally Dev</strong><br><span class="text-gray-400">JS Wizard</span></div>
+        <div><img src="https://i.pravatar.cc/100?u=3" class="rounded-full mx-auto mb-1" /><strong>Mia UX</strong><br><span class="text-gray-400">Design Queen</span></div>
+        <div><img src="https://i.pravatar.cc/100?u=4" class="rounded-full mx-auto mb-1" /><strong>Zap Bro</strong><br><span class="text-gray-400">Automation Ally</span></div>
       </div>
     </section>
 
@@ -227,8 +129,8 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="text-center py-6 text-sm text-gray-500 bg-[#0F172A] mt-16">
-  © 2025 Lumier Rodriguez. Built with 💾 + Tailwind + Retro Love
+<footer class="text-center text-sm text-gray-400 py-6 mt-10">
+  © 2025 Lumier Rodriguez. Built with 💾 Tailwind + Retro Love
 </footer>
 
 </body>
