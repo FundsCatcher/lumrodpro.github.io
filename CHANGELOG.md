@@ -87,3 +87,33 @@ This version overhauls the layout and visual structure of the portfolio to impro
 
 ---
 
+## [3.0.0] - 2025-06-14
+
+### ✨ Added
+- Created full **retro-modern MySpace-inspired portfolio** layout.
+- Added **"Top Friends"** module with avatars and roles.
+- Integrated `ScrollReveal.js` for animation effects.
+- Included Tailwind-styled **skills** and **certifications** sections.
+- Linked to live tools and case studies via Figma, Google Docs, and GitHub Pages.
+- Included hover effects, mood box, and contact info.
+
+### 🖼 Assets
+- All project thumbnails placed inside `/assets/img/`
+- Live avatar placeholder with styling for future profile image
+- ScrollReveal added for animated sections
+
+### 📄 Content
+- `README.md` now features GitHub-style badges, link widgets, and feature summary
+- `index.html` includes about, projects, friends, and mood sections
+- `CHANGELOG.md` initialized and live 🎉
+
+---
+
+## Upcoming 🚧
+
+- Add light/dark theme toggle
+- Music embed footer player (MySpace vibes!)
+- Auto-randomizer for “Top Friends”
+
+---
+
