@@ -3,299 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lumier Rodriguez | Portfolio</title>
+  <title>Lumier Rodriguez | MySpace Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
   <style>
-    .tile { transition: all 0.3s ease-in-out; }
-    .tile:hover { transform: scale(1.03); filter: brightness(1.1); }
-    .tooltip::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: 125%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #222;
-      color: #fff;
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      border-radius: 6px;
-      white-space: nowrap;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
+    .tile {
+      transition: all 0.3s ease-in-out;
     }
-    .tooltip:hover::after {
-      opacity: 1;
+    .tile:hover {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+    .retro-frame {
+      border: 2px solid #00FFFF33;
+      background-color: #1e293b;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body class="bg-[#0F172A] text-white font-sans">
 
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur border-b border-blue-500/20 shadow-sm">
-    <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-sm text-white">
-      <div class="font-bold text-lg text-cyan-400">Lumier Rodriguez</div>
-      <ul class="flex gap-4">
-        <li><a href="#skills" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Skills</a></li>
-        <li><a href="#certifications" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Certifications</a></li>
-        <li><a href="#works" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Works</a></li>
-        <li><a href="#contact" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Contact</a></li>
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-[#0F172A]/90 backdrop-blur border-b border-blue-500/20 shadow-sm">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-sm text-white">
+    <div class="font-bold text-lg text-cyan-400">Lumier Rodriguez</div>
+    <ul class="flex gap-4">
+      <li><a href="#about" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">About</a></li>
+      <li><a href="#skills" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Skills</a></li>
+      <li><a href="#certifications" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Certifications</a></li>
+      <li><a href="#works" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Projects</a></li>
+      <li><a href="#friends" class="nav-link px-4 py-2 rounded-full border border-blue-500 hover:bg-blue-500 transition">Friends</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- BANNER -->
+<section class="relative overflow-hidden">
+  <img src="assets/img/banner.jpg" alt="Banner" class="w-full h-64 object-cover opacity-20" />
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F172A]"></div>
+</section>
+
+<!-- PAGE CONTENT WRAPPER -->
+<div class="max-w-6xl mx-auto mt-8 px-6 flex flex-col lg:flex-row gap-6">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="lg:w-1/3 space-y-6">
+    <div class="retro-frame p-6 text-center">
+      <img src="3ef11826-b791-4c35-bc3e-77357c302b21.png" alt="Avatar" class="w-32 h-32 mx-auto rounded-full border-4 border-cyan-400 mb-4"/>
+      <h2 class="text-xl font-bold text-cyan-400">Lumier Rodriguez</h2>
+      <p class="text-gray-400 text-sm mt-1">AI Workflow Architect</p>
+      <p class="italic text-sm text-pink-300 mt-2">“Turning complexity into clarity.”</p>
+      <div class="mt-4 text-sm">
+        <p><strong>Mood:</strong> 💡 Inspired</p>
+        <p><strong>Status:</strong> Building new automations 🚀</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- RIGHT MAIN CONTENT -->
+  <main class="lg:w-2/3 space-y-12">
+
+    <!-- ABOUT -->
+    <section id="about" class="retro-frame p-6">
+      <h2 class="text-2xl font-bold mb-4 text-blue-400">👩‍💻 About Me</h2>
+      <p class="text-gray-300">
+        I turn complex processes into streamlined, scalable workflows.
+        Business Analyst • SaaS Specialist • AI Integrator. I believe in crafting seamless systems that empower teams and users alike.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="retro-frame p-6">
+      <h2 class="text-2xl font-bold mb-8 text-blue-400">🛠️ My Skills</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- COPY-PASTED SKILL TILES FROM ORIGINAL CODE -->
+        <div class="bg-slate-800 p-4 rounded shadow tile">
+          <div class="text-sm uppercase text-gray-400 mb-1">CRM</div>
+          <div class="text-lg font-semibold text-white">Salesforce</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded shadow tile">
+          <div class="text-sm uppercase text-gray-400 mb-1">Programming</div>
+          <div class="text-lg font-semibold text-white">Python (Basic)</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded shadow tile">
+          <div class="text-sm uppercase text-gray-400 mb-1">AI Assistant</div>
+          <div class="text-lg font-semibold text-white">ChatGPT</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded shadow tile">
+          <div class="text-sm uppercase text-gray-400 mb-1">Testing Tools</div>
+          <div class="text-lg font-semibold text-white">Postman & Swagger</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded shadow tile">
+          <div class="text-sm uppercase text-gray-400 mb-1">Automation</div>
+          <div class="text-lg font-semibold text-white">Make / Zapier</div>
+        </div>
+        <div class="bg-slate-800 p-4 rounded shadow tile">
+          <div class="text-sm uppercase text-gray-400 mb-1">BI Tools</div>
+          <div class="text-lg font-semibold text-white">Power BI / Tableau</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="retro-frame p-6">
+      <h2 class="text-2xl font-bold mb-8 text-blue-400">🎓 Certifications</h2>
+      <div class="grid md:grid-cols-3 gap-4 text-left">
+        <!-- Certifications copied from original structure -->
+        <a href="https://www.linkedin.com/learning/certificates/71afd0a79a..." target="_blank" class="tile bg-slate-800 p-4 rounded shadow text-white hover:scale-105 transition">
+          <span class="bg-gray-300 text-black px-2 py-1 text-xs font-bold rounded">AI</span>
+          <div>AI & Business Strategy</div>
+        </a>
+        <div class="tile bg-yellow-400 text-black p-4 rounded shadow hover:scale-105 transition">
+          <span class="bg-white text-black px-2 py-1 text-xs font-bold rounded">PMP</span>
+          <div>Certification (Update)</div>
+        </div>
+        <a href="https://www.linkedin.com/learning/certificates/9a7dd66..." target="_blank" class="tile bg-pink-500 text-white p-4 rounded shadow hover:scale-105 transition">
+          <span class="bg-white text-pink-500 px-2 py-1 text-xs font-bold rounded">Aha!</span>
+          <div>Product Mgmt</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="works" class="retro-frame p-6">
+      <h2 class="text-2xl font-bold mb-6 text-blue-400">🧪 Projects</h2>
+      <ul class="space-y-2 text-sm">
+        <li>🎲 <a href="https://fundscatcher.github.io/dice_roller.html" class="text-cyan-400 underline">Digital Dice Roller</a></li>
+        <li>📦 <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API" class="text-cyan-400 underline">Claims Automation – API + UX</a></li>
+        <li>🔁 <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync" class="text-cyan-400 underline">Salesforce Sync (Figma)</a></li>
+        <li>📄 <a href="https://docs.google.com/document/d/1t1WB_tP-JnOBRJm5KyjhHis2XJnZtypcQainS5Zr-eA/edit?tab=t.0" class="text-cyan-400 underline">Implementation Scenario (GDoc)</a></li>
       </ul>
-    </nav>
-  </header>
+    </section>
 
-  <!-- HERO -->
-  <section class="relative overflow-hidden section">
-    <div class="relative w-full max-h-[360px] overflow-hidden">
-      <img src="assets/img/banner.jpg" alt="Banner" class="w-full h-auto object-center opacity-20 mx-auto"/>
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0F172A]"></div>
-    </div>
-    <div class="text-center py-10 px-4 max-w-3xl mx-auto relative z-10">
-      <h1 class="text-4xl font-extrabold mb-4">
-        <span class="text-gray-300">I turn complex processes into</span><br>
-        <span class="bg-gradient-to-r from-blue-400 to-cyan-500 text-transparent bg-clip-text">streamlined, scalable workflows.</span>
-      </h1>
-      <p class="mt-2 text-lg text-gray-400">Business Analyst | SaaS Implementation | AI Workflow Architect</p>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-<section id="skills" class="py-20 px-6 bg-[#111827] text-center section">
-  <h2 class="text-2xl font-bold mb-10">🛠️ My Skills</h2>
-  <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">CRM</div>
-      <div class="text-lg font-semibold text-white">Salesforce</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Programming</div>
-      <div class="text-lg font-semibold text-white">Python (Basic)</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">AI Assistant</div>
-      <div class="text-lg font-semibold text-white">ChatGPT</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Testing Tools</div>
-      <div class="text-lg font-semibold text-white">Postman & Swagger</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Text Editors</div>
-      <div class="text-lg font-semibold text-white">Notepad++ / Sublime</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Automation</div>
-      <div class="text-lg font-semibold text-white">Make / Zapier</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">BI Tools</div>
-      <div class="text-lg font-semibold text-white">Power BI / Tableau</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Cloud & Office</div>
-      <div class="text-lg font-semibold text-white">Azure / Office 365</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Agile Stack</div>
-      <div class="text-lg font-semibold text-white">Jira / Confluence / Trello</div>
-    </div>
-
-    <div class="bg-slate-800 p-4 rounded shadow tile">
-      <div class="text-sm uppercase text-gray-400 mb-1">Healthcare</div>
-      <div class="text-lg font-semibold text-white">HL7 API</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="py-20 px-6 bg-[#0b1120] text-center section">
-  <h2 class="text-2xl font-bold mb-10">🎓 Certifications</h2>
-  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
-
-    <a href="https://www.linkedin.com/learning/certificates/71afd0a79a67f14fdfc1600846282bddc4244ce651e198781fbd1acc190852a4" target="_blank" class="tile reveal bg-slate-800 p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="1">
-      <span class="bg-gray-300 text-black px-3 py-1 text-lg font-bold rounded">AI</span>
-      <span class="text-base">AI & Business Strategy</span>
-    </a>
-
-    <a href="https://www.linkedin.com/learning/certificates/5d7e8634d80f38df7d7f97ee424a8df334d5935a9a9417ee2225da02cc3a5e91" target="_blank" class="tile reveal bg-slate-800 p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="2">
-      <span class="bg-blue-500 text-white px-3 py-1 text-lg font-bold rounded">Agile</span>
-      <span class="text-base">PM (Atlassian)</span>
-    </a>
-
-    <a href="https://www.linkedin.com/learning/certificates/ed69ba4b801cbcd30cd859bf201a94e58c9d1ae4c6ac71983315e21724c637ee" target="_blank" class="tile reveal bg-slate-800 p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="3">
-      <span class="bg-indigo-500 text-white px-3 py-1 text-lg font-bold rounded">BA</span>
-      <span class="text-base">& PM (PMI)</span>
-    </a>
-
-    <a href="https://www.linkedin.com/learning/certificates/4eb3d09c48fbbcaa90ee32a2beaff85a7feb91052647984cc23dd029102cb471" target="_blank" class="tile reveal bg-slate-800 p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="4">
-      <span class="bg-green-500 text-black px-3 py-1 text-lg font-bold rounded">Lean</span>
-      <span class="text-base">Process Improvement</span>
-    </a>
-
-    <div class="tile reveal bg-yellow-400 text-black p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="5">
-      <span class="px-3 py-1 text-lg font-bold rounded bg-white">PMP</span>
-      <span class="text-base">Certification (Update)</span>
-    </div>
-
-    <a href="https://www.linkedin.com/learning/certificates/9a7dd66cdd47b0d3522e13e43d770d908fba7eb8549f59a106e2ecafb7ed49d2" target="_blank" class="tile reveal bg-pink-500 text-white p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="6">
-      <span class="bg-white text-pink-500 px-3 py-1 text-lg font-bold rounded">Aha!</span>
-      <span class="text-base">Product Mgmt</span>
-    </a>
-
-    <a href="https://www.linkedin.com/learning/certificates/eeb5b3199e5cd5e7be79a6411450236d575435a5b5121a1a228947bfbb4e7fbd" target="_blank" class="tile reveal bg-gray-300 text-black p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="7">
-      <span class="bg-white text-black px-3 py-1 text-lg font-bold rounded">SN</span>
-      <span class="text-base">ServiceNow IT Leader</span>
-    </a>
-
-    <a href="https://www.linkedin.com/learning/certificates/5a6f6a315a6d699759c095d1583456c105621ccec7464855c1a112e98ddffc49" target="_blank" class="tile reveal bg-teal-400 text-black p-6 rounded shadow hover:scale-105 hover:shadow-xl transition duration-300 flex items-center gap-4" data-sr-id="8">
-      <span class="bg-white text-teal-500 px-3 py-1 text-lg font-bold rounded">6σ</span>
-      <span class="text-base">Six Sigma Black Belt</span>
-    </a>
-
-  </div>
-</section>
-
-<!-- WORKS / CASE STUDIES -->
-<section id="works" class="py-20 px-6 bg-[#0F172A] text-white section">
-  <h2 class="text-2xl font-bold text-center mb-10">🧪 Case Studies</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-
-    <!-- CLAIMS PROCESS -->
-    <a href="https://www.figma.com/board/cK8xmdOaHVtTAtH5O7H51i/Claims-Process-and-API?node-id=12-241&t=qpqNVAFqX3xlbO2D-4"
-       target="_blank"
-       class="group reveal tile relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition duration-300">
-      <img src="assets/img/claims-thumb.jpg" alt="Claims Automation" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
-      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-        <div class="text-center">
-          <h3 class="font-semibold text-lg text-white">Claims Automation</h3>
-          <p class="text-sm text-gray-300">API Map · Workflow · Intake UX</p>
+    <!-- FRIENDS -->
+    <section id="friends" class="retro-frame p-6">
+      <h2 class="text-2xl font-bold text-pink-400 mb-6">👯 My Top Friends</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm">
+        <div class="tile bg-slate-800 p-4 rounded shadow">
+          <img src="https://i.pravatar.cc/100?u=1" class="rounded-full mx-auto mb-2" />
+          <div class="text-white font-semibold">Octocat</div>
+          <div class="text-gray-400">Mentor</div>
+        </div>
+        <div class="tile bg-slate-800 p-4 rounded shadow">
+          <img src="https://i.pravatar.cc/100?u=2" class="rounded-full mx-auto mb-2" />
+          <div class="text-white font-semibold">Ally Dev</div>
+          <div class="text-gray-400">JS Wizard</div>
+        </div>
+        <div class="tile bg-slate-800 p-4 rounded shadow">
+          <img src="https://i.pravatar.cc/100?u=3" class="rounded-full mx-auto mb-2" />
+          <div class="text-white font-semibold">Mia UX</div>
+          <div class="text-gray-400">Design Queen</div>
+        </div>
+        <div class="tile bg-slate-800 p-4 rounded shadow">
+          <img src="https://i.pravatar.cc/100?u=4" class="rounded-full mx-auto mb-2" />
+          <div class="text-white font-semibold">Zap Bro</div>
+          <div class="text-gray-400">Automation Ally</div>
         </div>
       </div>
-    </a>
+    </section>
 
-    <!-- SALESFORCE SYNC -->
-    <a href="https://www.figma.com/board/AcBX6L9gDFVPNl7V43bjEN/Salesforce-Sync?node-id=10-118&t=70xDlFFh3LtZNVNk-4"
-       target="_blank"
-       class="group reveal tile relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition duration-300">
-      <img src="assets/img/salesforce-thumb.jpg" alt="Salesforce Sync" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
-      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-        <div class="text-center">
-          <h3 class="font-semibold text-lg text-white">Salesforce Sync</h3>
-          <p class="text-sm text-gray-300">Clockify · Zapier · Visual Flow</p>
-        </div>
-      </div>
-    </a>
-
-    <!-- DICE APP -->
-    <a href="https://fundscatcher.github.io/dice_roller.html"
-       target="_blank"
-       class="group reveal tile relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition duration-300">
-      <img src="assets/img/dice-thumb.jpg" alt="Dice Roller App" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
-      <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-        <div class="text-center">
-          <h3 class="font-semibold text-lg text-white">🎲 Digital Dice Roller</h3>
-          <p class="text-sm text-green-300">JS Web App · Hosted Live</p>
-        </div>
-      </div>
-    </a>
-
-     <!-- GDoc Link -->
-    <a href="https://docs.google.com/document/d/1t1WB_tP-JnOBRJm5KyjhHis2XJnZtypcQainS5Zr-eA/edit?tab=t.0#heading=h.erb3nobxqu3o"
-   class="group reveal tile relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition duration-300">
-  <img src="assets/img/implementation-scenario.jpg" alt="Implementation Scenario"
-       class="w-full h-64 object-cover group-hover:scale-105 transition duration-300" />
-  <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-    <div class="text-center">
-      <h3 class="font-semibold text-lg text-white">📄 Implementation Scenario</h3>
-      <p class="text-sm text-gray-300">View-Only · GDoc Link</p>
-    </div>
-  </div>
-</a>
-
-  </div>
-</section>
-
-    <!-- Add more tiles as needed -->
-
-   </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-20 px-6 bg-[#111827] text-center section">
-  <h2 class="text-2xl font-bold mb-4">📬 Contact Me</h2>
-  <p class="text-gray-400 mb-2">Let’s collaborate or discuss a project.</p>
-  <a href="mailto:rodriguez.lumier@gmail.com" class="text-blue-400 underline">rodriguez.lumier@gmail.com</a>
-  <div class="mt-4 space-x-4">
-    <a href="https://linkedin.com/in/lumrodri" target="_blank" class="text-blue-400 underline hover:text-blue-300">LinkedIn</a>
-    <a href="https://github.com/FundsCatcher" target="_blank" class="text-blue-400 underline hover:text-blue-300">GitHub</a>
-  </div>
-</section>
+  </main>
+</div>
 
 <!-- FOOTER -->
-<footer class="text-center py-6 text-sm text-gray-500 bg-[#0F172A]">
-  © 2025 Lumier Rodriguez. All rights reserved.
+<footer class="text-center py-6 text-sm text-gray-500 bg-[#0F172A] mt-16">
+  © 2025 Lumier Rodriguez. Built with 💾 + Tailwind + Retro Love
 </footer>
-
-  
-<!-- SCRIPT: ScrollReveal + ScrollSpy -->
-<script>
-  ScrollReveal().reveal('.section', {
-    origin: 'bottom',
-    distance: '20px',
-    duration: 800,
-    delay: 100,
-    reset: false
-  });
-
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = [...navLinks].map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
-<script>
-  const sr = ScrollReveal({
-    origin: 'bottom',
-    distance: '40px',
-    duration: 700,
-    delay: 100,
-    easing: 'ease-in-out',
-    reset: false
-  });
-
-  sr.reveal('.reveal', {
-    interval: 120
-  });
-</script>
 
 </body>
 </html>
