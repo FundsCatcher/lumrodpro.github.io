@@ -72,7 +72,7 @@ It brings together MySpace-inspired layout motifs with professional UX, dark the
 
 ## 📜 Changelog
 
-**Version 2.1 – 2025-06-14**
+**Version 3.0 – 2025-06-14**
 - 👯 Added MySpace-style Top Friends layout
 - 🧠 Merged retro theme with original Tailwind skills & certs UI
 - 🎯 Revised index.html layout to 2-column format (sidebar + content)
